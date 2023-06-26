@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
 
 export default function Home() {
-  return <main className={styles.main}>this is a test branch</main>;
+  return <div>I am ready for this project to Bang!</div>;
 }
