@@ -1,0 +1,21 @@
+.container {
+  /* background-color: red; */
+  height: 6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #dad5c2;
+}
+
+.menu {
+  /* background-color: blue; */
+  display: flex;
+  gap: 90px;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: #52514e;
+  font-size: 18px;
+}

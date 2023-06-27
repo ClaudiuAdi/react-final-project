@@ -1,0 +1,45 @@
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 70px;
+  gap: 45px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.encouraging-text {
+  font-size: 20px;
+  color: #52514e;
+  text-align: left;
+}
+
+.handwritten {
+  font-size: 70px;
+  padding-left: 30px;
+  color: #487254;
+}
+
+.handwritten-first-letter {
+  font-size: 90px;
+}
+
+.welcome-buttons {
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-content: flex-start;
+}
+
+.booking-button {
+  border: 1px solid #487254;
+  background-color: #487254;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.learn-more-button {
+  background-color: #fff;
+  padding: 12px 32px;
+}
