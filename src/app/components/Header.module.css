@@ -1,6 +1,6 @@
 .container {
   /* background-color: red; */
-  height: 6rem;
+  height: 5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,5 +17,5 @@
 .link {
   text-decoration: none;
   color: #52514e;
-  font-size: 18px;
+  font-size: 16px;
 }
