@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "./Welcome.module.css";
-import { Mr_De_Haviland } from "next/font/google";
-
-const haviland = Mr_De_Haviland({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { haviland, poppins } from "../utils/fonts";
 
 function Welcome() {
   return (
@@ -30,8 +25,16 @@ function Welcome() {
           Book now and get the best prices
         </h2>
         <div className={styles["welcome-buttons"]}>
-          <button className={styles["booking-button"]}>BOOK NOW</button>
-          <button className={styles["learn-more-button"]}>LEARN MORE</button>
+          <button
+            className={styles["booking-button"] + " " + poppins.className}
+          >
+            BOOK NOW
+          </button>
+          <button
+            className={styles["learn-more-button"] + " " + poppins.className}
+          >
+            LEARN MORE
+          </button>
         </div>
       </div>
     </>

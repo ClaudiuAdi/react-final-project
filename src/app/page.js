@@ -5,12 +5,8 @@ import Header from "./components/Header";
 import styles from "./page.module.css";
 import welcome_image from "./resources/welcome_image4.jpg";
 import Welcome from "./components/Welcome";
-import { Prata } from "next/font/google";
-
-const prata = Prata({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { prata, poppins } from "./utils/fonts";
+import Engage from "./components/Engage";
 
 export default function Home() {
   return (
@@ -20,11 +16,11 @@ export default function Home() {
         <Image
           className={styles.image}
           src={welcome_image}
-          width="auto"
           alt="Hotel Picture"
         />
         <Welcome />
       </div>
+      <Engage />
     </>
   );
 }

@@ -2,30 +2,32 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 70px;
+  font-size: 75px;
   gap: 45px;
   height: 100%;
   margin: 0 auto;
 }
 
 .encouraging-text {
-  font-size: 20px;
+  font-size: 25px;
   color: #52514e;
   text-align: left;
+  font-weight: 500;
 }
 
 .handwritten {
-  font-size: 70px;
+  font-size: 85px;
   padding-left: 30px;
   color: #487254;
 }
 
 .handwritten-first-letter {
-  font-size: 90px;
+  font-size: 100px;
 }
 
 .welcome-buttons {
-  font-size: 14px;
+  font-size: 16px;
+  letter-spacing: 2px;
   display: flex;
   justify-content: flex-start;
   gap: 15px;
@@ -36,10 +38,11 @@
   border: 1px solid #487254;
   background-color: #487254;
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 40px;
 }
 
 .learn-more-button {
+  border: 1px solid #fff;
   background-color: #fff;
-  padding: 12px 32px;
+  padding: 20px 40px;
 }
