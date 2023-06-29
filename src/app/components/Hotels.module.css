@@ -1,0 +1,86 @@
+.hotel-section {
+  padding: 110px 7%;
+}
+
+.hotel-section-title {
+  padding-left: 8px;
+  font-size: 85px;
+  color: #487254;
+  padding-bottom: 20px;
+}
+
+.hotel-section-title span {
+  font-size: 100px;
+}
+
+.hotels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.hotel {
+  width: 500px;
+  height: 600px;
+  background-color: #f6f3e9;
+  color: #52514e;
+  animation: all 0.5s;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.hotel-information {
+  border: 2px solid #dad5c2;
+  border-top: none;
+  margin-top: -3px;
+  padding: 2.2rem 2.8rem 1rem 3.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+}
+
+.hotel-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding-bottom: 26px;
+}
+
+.hotel-price {
+  color: #487254;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.hotel-price span {
+  color: #a0a0a0;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.hotel-extra-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel-breakfast-price {
+  color: #a0a0a0;
+}
+
+.hotel-extra-info-rating {
+  background-color: #dad5c2;
+  color: #f6f3e9;
+  padding: 10px 15px;
+  width: fit-content;
+  position: absolute;
+  right: 2.8rem;
+  bottom: 1.2rem;
+  font-size: 1.1rem;
+}
