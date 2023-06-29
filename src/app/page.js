@@ -7,6 +7,7 @@ import welcome_image from "./resources/welcome_image4.jpg";
 import Welcome from "./components/Welcome";
 import { prata, poppins } from "./utils/fonts";
 import Engage from "./components/Engage";
+import Hotels from "./components/Hotels";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Welcome />
       </div>
       <Engage />
+      <Hotels />
     </>
   );
 }

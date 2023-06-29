@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 45% 55%;
   grid-template-rows: auto 1fr;
+  border-bottom: 2px solid #dad5c2;
+  padding-bottom: 80px;
 }
 
 .engage-title,
@@ -26,7 +28,7 @@
   font-weight: 400;
   font-size: 20px;
   align-self: center;
-  padding: 90px 90px;
+  padding: 70px 90px;
   padding-left: 30%;
   line-height: 30px;
 }
