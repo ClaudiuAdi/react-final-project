@@ -1,0 +1,51 @@
+.advantages-section {
+  background-image: url("../resources/palm_trees.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+}
+
+.advantages-image-overlay {
+  background-color: rgba(26, 0, 0, 0.733);
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.advantages {
+  display: flex;
+  gap: 5%;
+}
+
+.advantages-title {
+  font-size: 70px;
+}
+
+.advantage {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 3px solid red; */
+  gap: 20px;
+  text-align: center;
+}
+
+.advantage-icon {
+  font-size: 60px;
+  padding-bottom: 10px;
+}
+
+.advantage-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.advantage-description {
+  line-height: 20px;
+}
