@@ -1,0 +1,109 @@
+.title-section {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  height: 10px;
+  align-items: center;
+}
+
+.bar {
+  height: 2px;
+  background-color: #dad5c2;
+  display: block;
+}
+
+.first-bar {
+  width: 20%;
+}
+
+.last-bar {
+  width: 80%;
+}
+
+.booking-form-section {
+  /* border-top: 2px solid #dad5c2; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 0;
+}
+
+.form-card {
+  width: 52%;
+  display: flex;
+  /* border: 2px solid blue; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.form-image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.form {
+  border-left: none;
+  width: 100%;
+  padding: 40px 60px;
+  background-color: #dad5c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field,
+.form-input-booking-date,
+.form-input-nights-number {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.breakfast-input,
+.form-grouped-inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-grouped-inputs {
+  justify-content: space-between;
+}
+
+.form > div > div > input,
+.form > div > div > select,
+.form-input-booking-date > input,
+.form-input-nights-number > select {
+  outline: none;
+  font-weight: 400;
+  color: #52514e;
+  border: 1px solid #f6f3e9;
+  padding: 5px 16px;
+  height: 42px;
+  margin: 8px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+  font-size: 16px;
+}
+
+.form > div > div > select,
+.form-input-nights-number > select {
+  height: 54px;
+}
+
+.breakfast-input {
+  display: flex;
+  align-items: center;
+}
+
+.button-submit {
+  background-color: #487254;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
