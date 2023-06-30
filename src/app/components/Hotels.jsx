@@ -6,7 +6,7 @@ import { prata, poppins, haviland } from "../utils/fonts";
 import StarIcon from "./StarIcon";
 
 function Hotels() {
-  const dataArray = JSON.parse(JSON.stringify(hotelsJson));
+  const hotelsArray = JSON.parse(JSON.stringify(hotelsJson));
 
   return (
     <div className={styles["hotel-section"]}>
@@ -14,7 +14,7 @@ function Hotels() {
         <span>O</span>ur hotels
       </p>
       <div className={styles["hotels"]}>
-        {dataArray.map((hotel) => (
+        {hotelsArray.map((hotel) => (
           <div key={hotel.name} className={styles["hotel"]}>
             <img
               src={hotel.featured_image}

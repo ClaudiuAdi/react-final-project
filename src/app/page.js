@@ -8,6 +8,7 @@ import Welcome from "./components/Welcome";
 import { prata, poppins } from "./utils/fonts";
 import Engage from "./components/Engage";
 import Hotels from "./components/Hotels";
+import Advantages from "./components/Advantages";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </div>
       <Engage />
       <Hotels />
+      <Advantages />
     </>
   );
 }
