@@ -4,17 +4,14 @@ import hotelsJson from "../data/hotels.json";
 import reception_image from "../resources/reception2.jpg";
 import Image from "next/image";
 import { poppins } from "../utils/fonts";
+import SectionTitle from "./SectionTitle";
 
 function BookingForm() {
   const hotelsArray = JSON.parse(JSON.stringify(hotelsJson));
 
   return (
     <>
-      <div className={styles["title-section"]}>
-        <span className={styles.bar + " " + styles["first-bar"]}></span>
-        <span>Booking</span>
-        <span className={styles.bar + " " + styles["last-bar"]}></span>
-      </div>
+      <SectionTitle title={"BOOKING"} />
       <div className={styles["booking-form-section"]}>
         <div className={styles["form-card"]}>
           <img
@@ -40,7 +37,7 @@ function BookingForm() {
               </div>
               <div className={styles["form-grouped-inputs"]}>
                 <div className={styles["form-input-booking-date"]}>
-                  <label htmlFor="booking-date">Date</label>
+                  <label htmlFor="booking-date">Check in date</label>
                   <input type="date" id="booking-date" />
                 </div>
                 <div className={styles["form-input-nights-number"]}>
