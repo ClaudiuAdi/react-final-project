@@ -15,7 +15,11 @@ function Hotels() {
       <div className={styles["hotel-section"]}>
         <p className={styles["hotel-section-title"] + " " + prata.className}>
           {/* Boundless Vacation <span className={haviland.className}>Bliss</span> */}
-          Infinite Vacation <span className={haviland.className}>Delight</span>
+          {/* Infinite Vacation <span className={haviland.className}>Delight</span> */}
+          {/* <span className={haviland.className}>Y</span>
+          our vacation <span className={haviland.className}>Heaven</span> */}
+          <span className={haviland.className}>Y</span>
+          our paradise <span className={haviland.className}>Retreat</span>
         </p>
         <div className={styles["hotels"]}>
           {hotelsArray.map((hotel) => (

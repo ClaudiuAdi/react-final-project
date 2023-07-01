@@ -18,7 +18,7 @@ function Advantages() {
 
   return (
     <>
-      <SectionTitle title={"ADVANTAGES"} />
+      {/* <SectionTitle title={"ADVANTAGES"} /> */}
       <div className={styles["advantages-container"]}>
         <div className={styles["advantages-section"]}>
           <div className={styles["advantages-image-overlay"]}>
