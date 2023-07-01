@@ -1,3 +1,9 @@
+.section-title-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .title-section {
   width: 100%;
   display: flex;
@@ -9,6 +15,14 @@
   font-size: 18px;
   letter-spacing: 2px;
   white-space: nowrap;
+}
+
+.horizontal {
+  transform: rotate(0deg);
+}
+
+.vertical {
+  transform: rotate(90deg);
 }
 
 .bar {

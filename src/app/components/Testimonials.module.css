@@ -1,0 +1,159 @@
+.testimonials-section {
+  border-top: 2px solid #dad5c2;
+  display: flex;
+  align-items: center;
+  height: 850px;
+  position: relative;
+}
+
+.title-section {
+  width: 10px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 90px;
+  color: #487254;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  margin-left: -6px;
+}
+
+.bar {
+  width: 2px;
+  background-color: #dad5c2;
+  display: block;
+}
+
+.title-bar {
+  transform: rotate(90deg);
+}
+
+.first-bar {
+  height: 10%;
+}
+
+.last-bar {
+  height: 68%;
+}
+
+.testimonial-photo-part {
+  border: 2px solid #dad5c2;
+  border-right: none;
+  border-left: none;
+  height: 100%;
+  width: 51%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-photo-container {
+  width: 80%;
+  height: 85%;
+  border: 2px solid red;
+}
+
+.testimonial-photo-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial {
+  /* border: 2px solid red; */
+  width: 44%;
+  padding: 0 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: -6px;
+  position: relative;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* border: 2px solid blue; */
+
+  height: 85%;
+}
+
+.testimonial-text {
+  font-size: 44px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.testimonial-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-author {
+  font-size: 30px;
+  color: #52514e;
+  letter-spacing: 1px;
+}
+
+.small-bar {
+  height: 2px;
+  background-color: #dad5c2;
+  display: block;
+  width: 120px;
+}
+
+.testimonial-date {
+  color: #487254;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.testimonial-navigation {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: -36px;
+}
+
+.big-bar {
+  height: 2px;
+  background-color: #dad5c2;
+  display: block;
+  width: 100%;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.left-button,
+.right-button {
+  width: 70px;
+  height: 70px;
+  background-color: #487254;
+  border: 1px solid #487254;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-button {
+  color: #fff;
+}
+
+.left-button {
+  background-color: #f6f3e9;
+  color: #487254;
+}
