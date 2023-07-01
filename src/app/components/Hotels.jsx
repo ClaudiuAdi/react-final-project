@@ -11,7 +11,7 @@ function Hotels() {
 
   return (
     <>
-      <SectionTitle title={"OUR HOTELS"} />
+      <SectionTitle title={"OUR HOTELS"} axis={"horizontal"} />
       <div className={styles["hotel-section"]}>
         <p className={styles["hotel-section-title"] + " " + prata.className}>
           {/* Boundless Vacation <span className={haviland.className}>Bliss</span> */}

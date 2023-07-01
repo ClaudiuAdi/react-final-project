@@ -10,6 +10,7 @@ import Engage from "./components/Engage";
 import Hotels from "./components/Hotels";
 import Advantages from "./components/Advantages";
 import BookingForm from "./components/BookingForm";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Engage />
       <Hotels />
       <Advantages />
+      <Testimonials />
       <BookingForm />
     </>
   );

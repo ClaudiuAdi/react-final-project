@@ -1,11 +1,11 @@
 .booking-form-section {
-  border-top: 2px solid #dad5c2;
+  /* border-top: 2px solid #dad5c2; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding: 110px 0;
+  padding: 160px 0 110px;
 }
 
 .section-title-tag {
