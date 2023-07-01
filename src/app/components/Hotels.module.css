@@ -1,17 +1,17 @@
 .hotel-section {
-  padding: 100px 7%;
+  padding: 85px 7%;
   padding-bottom: 150px;
 }
 
 .hotel-section-title {
   padding-left: 8px;
-  font-size: 85px;
-  color: #487254;
+  font-size: 55px;
   padding-bottom: 20px;
 }
 
 .hotel-section-title span {
   font-size: 100px;
+  color: #487254;
 }
 
 .hotels {
