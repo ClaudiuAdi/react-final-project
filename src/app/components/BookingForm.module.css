@@ -1,16 +1,35 @@
 .booking-form-section {
-  /* border-top: 2px solid #dad5c2; */
+  border-top: 2px solid #dad5c2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
   padding: 110px 0;
+}
+
+.section-title-tag {
+  display: flex;
+  height: 10px;
+  align-items: center;
+  gap: 30px;
+  color: #487254;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.section-engaging-subtitle {
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
 }
 
 .form-card {
   width: 52%;
   display: flex;
   /* border: 2px solid blue; */
-  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13); */
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.13);
 }
 
 .form-image {
@@ -20,11 +39,11 @@
 }
 
 .form {
-  /* border: 2px solid red; */
   border-left: none;
   width: 100%;
   padding: 40px 60px;
   background-color: #dad5c2;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,12 +52,10 @@
 .form-inputs {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 40px;
 }
 
-.field,
-.form-input-booking-date,
-.form-input-nights-number {
+/* .field {
   display: flex;
   flex-direction: column;
   font-weight: 600;
@@ -61,12 +78,12 @@
   outline: none;
   font-weight: 400;
   color: #52514e;
-  border: 1px solid #a0a0a0;
+  border: 1px solid #f6f3e9;
   padding: 5px 16px;
   height: 42px;
   margin: 8px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
   font-size: 16px;
-  background-color: #f6f3e9;
 }
 
 .form > div > div > select,
@@ -85,4 +102,129 @@
   padding: 20px 40px;
   font-size: 16px;
   letter-spacing: 2px;
+} */
+
+/* varianta misto */
+.form-inputs .field {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.form-grouped-inputs {
+  justify-content: space-between;
+}
+
+.form-inputs div input,
+.form-inputs .field select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background-color: #dad5c2;
+  background-color: #fff;
+  outline: none;
+  font-weight: 400;
+  color: #52514e;
+  height: 100%;
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label,
+.field select:focus ~ label,
+.field select:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #487254;
+  font-weight: 500;
+}
+
+.form-inputs .field label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #52514e;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.form-input-booking-date input:focus ~ label,
+.form-input-booking-date input:valid ~ label {
+  transform: none;
+}
+
+.form-inputs > .form-grouped-inputs > .form-input-booking-date label {
+  bottom: 30px;
+  font-size: 15px;
+  color: #487254;
+  font-weight: 500;
+}
+
+.form-inputs > .breakfast-input label {
+  position: static;
+  padding-right: 10px;
+}
+
+.form-inputs .form-grouped-inputs > * {
+  width: auto;
+  min-width: 35%;
+}
+
+.field .underline {
+  position: absolute;
+  height: 0px;
+  width: 101%;
+  bottom: -10px;
+  padding-top: 2px;
+}
+
+.form-inputs > .form-input-hotel .underline,
+.form-inputs > .form-grouped-inputs > .form-input-nights-number .underline {
+  bottom: -6px;
+}
+
+.form-inputs > .form-grouped-inputs > .form-input-booking-date .underline {
+  bottom: -8px;
+}
+
+.field .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #487254;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.field input:focus ~ .underline:before,
+.field input:valid ~ .underline:before,
+.field select:focus ~ .underline:before,
+.field select:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+
+.breakfast-input,
+.form-grouped-inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.breakfast-input {
+  display: flex;
+  align-items: center;
+}
+
+.button-submit {
+  background-color: #487254;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.select-hide-option {
+  display: none;
 }
