@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./WelcomeImage.module.css";
-import riviera_welcome from "../resources/riviera-cancun-welcome-image2.jpg";
-import sentori_welcome from "../resources/tui-sentori-welcome-image.jpeg";
+import riviera_welcome from "../resources/riviera-cancun.jpg";
 import { poppins } from "../utils/fonts";
 
 function WelcomeImage() {
