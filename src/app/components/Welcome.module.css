@@ -39,10 +39,14 @@
   background-color: #487254;
   color: #fff;
   padding: 20px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
 .learn-more-button {
   border: 1px solid #fff;
   background-color: #fff;
   padding: 20px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Testimonials.module.css";
 import { poppins, prata } from "../utils/fonts";
-import reception_image from "../resources/reception2.jpg";
+import john_dias from "../resources/john-dias.jpg";
+import quotations_image from "../resources/quotationMarks.png";
 import { IonIcon } from "@ionic/react";
 import { arrowBackSharp, arrowForwardSharp } from "ionicons/icons";
 
@@ -10,7 +11,7 @@ function Testimonials() {
     <div className={styles["testimonials-section"]}>
       <div className={styles["testimonial-photo-part"]}>
         <div className={styles["testimonial-photo-container"]}>
-          <img src={reception_image.src} alt="asdasdasd" />
+          <img src={john_dias.src} alt="User testimonial image" />
         </div>
       </div>
       <div className={styles["title-section"]}>
@@ -22,6 +23,11 @@ function Testimonials() {
       </div>
       <div className={styles["testimonial"]}>
         <div className={styles["testimonial-info"] + " " + prata.className}>
+          <img
+            className={styles["testimonial-quotations"]}
+            src={quotations_image.src}
+            alt=""
+          />
           <h2 className={styles["testimonial-text"]}>
             They are not typical hotels you see out there. They have taken care
             of every last detail. They are very comfortable and the truth is
