@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Engage.module.css";
 import { prata, poppins } from "../utils/fonts";
 import Image from "next/image";
-import welcoming_beach from "../resources/welcoming_beach.jpg";
 import sandals_royal from "../resources/royal-engage-image.jpg";
 
 function Engage() {
