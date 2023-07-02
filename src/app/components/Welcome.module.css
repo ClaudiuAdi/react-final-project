@@ -5,7 +5,9 @@
   font-size: 75px;
   gap: 45px;
   height: 100%;
-  margin: 0 auto;
+  padding-left: 17%;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .encouraging-text {

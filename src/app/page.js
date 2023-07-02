@@ -14,18 +14,15 @@ import Advantages from "./components/Advantages";
 import BookingForm from "./components/BookingForm";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
+import WelcomeImage from "./components/WelcomeImage";
 
 export default function Home() {
   return (
     <>
       <div className={styles.container + " " + prata.className}>
         <Header className={styles.header} />
-        <Image
-          className={styles.image}
-          src={riviera_welcome}
-          alt="Hotel Picture"
-        />
-        <Welcome />
+        <WelcomeImage className={styles["welcoming-image"]} />
+        <Welcome className={styles["welcoming-text"]} />
       </div>
       <Engage />
       <Hotels />

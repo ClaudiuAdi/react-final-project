@@ -10,7 +10,8 @@
 .hotel-section-title {
   padding-left: 8px;
   font-size: 55px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
+  padding-bottom: 35px;
 }
 
 .hotel-section-title span {

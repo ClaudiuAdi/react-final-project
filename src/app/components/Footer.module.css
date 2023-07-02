@@ -7,7 +7,7 @@
 }
 
 .footer-image-overlay {
-  background-color: rgba(26, 0, 0, 0.8);
+  background-color: rgba(26, 0, 0, 0.85);
   height: 100%;
   color: #fff;
   display: flex;
@@ -35,7 +35,7 @@
 
 .footer-socials {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   font-size: 30px;
 }
 
