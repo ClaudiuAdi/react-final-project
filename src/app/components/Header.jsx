@@ -5,7 +5,7 @@ import { poppins } from "../utils/fonts";
 function Header() {
   return (
     <div className={styles.container}>
-      <span>logo</span>
+      <span className={styles["logo"]}>logo</span>
       <div className={styles.menu}>
         <a className={styles["link"] + " " + poppins.className} href="">
           Our Hotels

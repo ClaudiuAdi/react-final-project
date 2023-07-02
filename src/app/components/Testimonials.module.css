@@ -51,9 +51,9 @@
 }
 
 .testimonial-photo-container {
-  width: 80%;
-  height: 85%;
-  border: 2px solid red;
+  width: 65%;
+  height: 80%;
+  /* border: 2px solid red; */
 }
 
 .testimonial-photo-container > img {
@@ -77,10 +77,20 @@
 .testimonial-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   /* border: 2px solid blue; */
+  width: 85%;
+  margin-left: 30px;
 
-  height: 85%;
+  height: 80%;
+  margin-top: 10%;
+}
+
+.testimonial-quotations {
+  position: absolute;
+  transform: rotate(180deg);
+  height: 140px;
+  top: 0;
 }
 
 .testimonial-text {

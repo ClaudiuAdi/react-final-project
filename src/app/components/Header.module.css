@@ -7,11 +7,14 @@
   border-bottom: 2px solid #dad5c2;
 }
 
+.logo {
+  padding-left: 7%;
+}
+
 .menu {
   /* background-color: blue; */
   display: flex;
-  gap: 90px;
-  justify-content: space-between;
+  gap: 60px;
 }
 
 .link {
