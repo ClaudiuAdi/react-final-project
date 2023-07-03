@@ -34,7 +34,7 @@ function Testimonials() {
             that you are almost better than home. We will come back for sure!
           </h2>
           <div className={styles["testimonial-details"]}>
-            <p className={styles["testimonial-author"]}>Eliza</p>
+            <p className={styles["testimonial-author"]}>John</p>
             <span className={styles["small-bar"]}></span>
             <span
               className={styles["testimonial-date"] + " " + poppins.className}
