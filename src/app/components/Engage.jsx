@@ -12,11 +12,9 @@ function Engage() {
         your paradise.
       </h2>
       <div className={poppins.className + " " + styles["engage-description"]}>
-        We're inspired by travel's wonders and crafting unforgettable
-        experiences. Our mission is to <strong>redefine</strong> your journey
-        with
-        <br />
-        meticulous attention and exceptional moments.
+        We draw inspiration from the splendors of luxury travel and curating
+        extraordinary experiences. Our mission is to redefine your lavish
+        journey with utmost precision and moments of grandeur.
       </div>
       <div className={styles["engage-more"]}>
         <Image className={styles.image} src={sandals_royal} alt="" />

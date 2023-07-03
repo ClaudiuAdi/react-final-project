@@ -24,11 +24,13 @@ function Hotels() {
         <div className={styles["hotels"]}>
           {hotelsArray.map((hotel) => (
             <div key={hotel.name} className={styles["hotel"]}>
-              <img
-                src={hotel.featured_image}
-                alt=""
-                className={styles["hotel-image"]}
-              />
+              <div className={styles["hotel-image-container"]}>
+                <img
+                  src={hotel.featured_image}
+                  alt=""
+                  className={styles["hotel-image"]}
+                />
+              </div>
               <div
                 className={
                   styles["hotel-information"] + " " + poppins.className
