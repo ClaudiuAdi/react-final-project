@@ -14,7 +14,7 @@ function Header() {
           Why book with us
         </a>
         <a className={styles["link"] + " " + poppins.className} href="">
-          Book now
+          Testimonials
         </a>
       </div>
       {/* <a href="">Book now</a> */}
