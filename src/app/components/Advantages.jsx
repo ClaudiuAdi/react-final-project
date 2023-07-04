@@ -1,20 +1,14 @@
-import Image from "next/image";
 import React from "react";
 import advantagesJson from "../data/advantages.json";
 import styles from "./Advantages.module.css";
-import { IonIcon } from "@ionic/react";
-import {
-  flashSharp,
-  cashSharp,
-  ribbonSharp,
-  peopleSharp,
-} from "ionicons/icons";
+import { Lightning, Money, Medal, Users } from "@phosphor-icons/react";
 import { prata, poppins } from "../utils/fonts";
 import SectionTitle from "./SectionTitle";
+import AdvantageCard from "./AdvantageCard";
 
 function Advantages() {
   const advantagesArray = JSON.parse(JSON.stringify(advantagesJson));
-  const icons = [flashSharp, cashSharp, ribbonSharp, peopleSharp];
+  const icons = [Lightning, Money, Medal, Users];
 
   return (
     <>
@@ -27,16 +21,11 @@ function Advantages() {
             </h2>
             <div className={styles.advantages + " " + poppins.className}>
               {advantagesArray.map((advantage, index) => (
-                <div key={advantage.title} className={styles.advantage}>
-                  <IonIcon
-                    icon={icons.at(index)}
-                    className={styles["advantage-icon"]}
-                  />
-                  <p className={styles["advantage-title"]}>{advantage.title}</p>
-                  <p className={styles["advantage-description"]}>
-                    {advantage.description}
-                  </p>
-                </div>
+                <AdvantageCard
+                  key={index}
+                  advantage={advantage}
+                  icon={icons.at(index)}
+                />
               ))}
             </div>
           </div>

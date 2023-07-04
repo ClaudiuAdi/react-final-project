@@ -1,8 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-regular-svg-icons";
-import { IonIcon } from "@ionic/react";
-import { starOutline } from "ionicons/icons";
+import { Star } from "@phosphor-icons/react";
+import Icon from "./Icon";
 
 function StarIcon(props) {
   const starArray = Array.from({ length: props.count });
@@ -10,7 +8,7 @@ function StarIcon(props) {
   return (
     <div>
       {starArray.map((_, index) => (
-        <IonIcon key={index} icon={starOutline} />
+        <Icon key={index} icon={Star} weight="fill" />
       ))}
     </div>
   );

@@ -1,16 +1,20 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import { poppins } from "../utils/fonts";
-import { IonIcon } from "@ionic/react";
 import {
-  logoFacebook,
-  logoInstagram,
-  logoLinkedin,
-  ellipseSharp,
-} from "ionicons/icons";
+  Lightning,
+  Money,
+  Medal,
+  Users,
+  FacebookLogo,
+  InstagramLogo,
+  LinkedinLogo,
+  Circle,
+} from "@phosphor-icons/react";
+import Icon from "./Icon";
 
 function Footer() {
-  const socialIcons = [logoFacebook, logoInstagram, logoLinkedin];
+  const socialIcons = [FacebookLogo, InstagramLogo, LinkedinLogo];
 
   return (
     <div className={styles["footer-section"]}>
@@ -22,32 +26,36 @@ function Footer() {
             <span>+(40)742-049-501</span>
           </div>
           <div className={styles["footer-socials"]}>
-            <IonIcon icon={logoFacebook} />
-            <IonIcon icon={logoInstagram} />
-            <IonIcon icon={logoLinkedin} />
+            <Icon icon={FacebookLogo} weight="regular" />
+            <Icon icon={InstagramLogo} weight="regular" />
+            <Icon icon={LinkedinLogo} weight="regular" />
           </div>
         </div>
         <div className={styles["footer-menu-container"]}>
           <span className={styles["footer-bar"]}></span>
           <div className={styles["footer-menu"]}>
             <span>About us</span>
-            <IonIcon
-              icon={ellipseSharp}
+            <Icon
+              icon={Circle}
+              weight="fill"
               className={styles["footer-menu-container-circle"]}
             />
             <span>Gallery</span>
-            <IonIcon
-              icon={ellipseSharp}
+            <Icon
+              icon={Circle}
+              weight="fill"
               className={styles["footer-menu-container-circle"]}
             />
             <span>Support</span>
-            <IonIcon
-              icon={ellipseSharp}
+            <Icon
+              icon={Circle}
+              weight="fill"
               className={styles["footer-menu-container-circle"]}
             />
             <span>Terms & Conditions</span>
-            <IonIcon
-              icon={ellipseSharp}
+            <Icon
+              icon={Circle}
+              weight="fill"
               className={styles["footer-menu-container-circle"]}
             />
             <span>Privacy Policy</span>

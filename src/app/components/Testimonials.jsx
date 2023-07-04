@@ -3,8 +3,8 @@ import styles from "./Testimonials.module.css";
 import { poppins, prata } from "../utils/fonts";
 import john_dias from "../resources/john-dias.jpg";
 import quotations_image from "../resources/quotationMarks.png";
-import { IonIcon } from "@ionic/react";
-import { arrowBackSharp, arrowForwardSharp } from "ionicons/icons";
+import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import Icon from "./Icon";
 
 function Testimonials() {
   return (
@@ -46,15 +46,16 @@ function Testimonials() {
         <div className={styles["testimonial-navigation"]}>
           <div className={styles["navigation-buttons"]}>
             <button className={styles["left-button"]}>
-              {" "}
-              <IonIcon
-                icon={arrowBackSharp}
+              <Icon
+                icon={ArrowLeft}
+                weight="regular"
                 className={styles["advantage-icon"]}
               />
             </button>
             <button className={styles["right-button"]}>
-              <IonIcon
-                icon={arrowForwardSharp}
+              <Icon
+                icon={ArrowRight}
+                weight="regular"
                 className={styles["advantage-icon"]}
               />
             </button>

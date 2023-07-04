@@ -30,26 +30,3 @@
 .advantages-title {
   font-size: 70px;
 }
-
-.advantage {
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
-}
-
-.advantage-icon {
-  font-size: 60px;
-  padding-bottom: 10px;
-}
-
-.advantage-title {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.advantage-description {
-  line-height: 20px;
-}
