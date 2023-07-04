@@ -8,7 +8,7 @@ import Icon from "./Icon";
 
 function Testimonials() {
   return (
-    <div className={styles["testimonials-section"]}>
+    <section className={styles["testimonials-section"]}>
       <div className={styles["testimonial-photo-part"]}>
         <div className={styles["testimonial-photo-container"]}>
           <img src={john_dias.src} alt="User testimonial image" />
@@ -63,7 +63,7 @@ function Testimonials() {
           <span className={styles["big-bar"]}></span>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

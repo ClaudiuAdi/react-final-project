@@ -4,7 +4,7 @@ import { poppins } from "../utils/fonts";
 
 function Header() {
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <span className={styles["logo"]}>logo</span>
       <div className={styles.menu}>
         <a className={styles["link"] + " " + poppins.className} href="">
@@ -18,7 +18,7 @@ function Header() {
         </a>
       </div>
       {/* <a href="">Book now</a> */}
-    </div>
+    </header>
   );
 }
 

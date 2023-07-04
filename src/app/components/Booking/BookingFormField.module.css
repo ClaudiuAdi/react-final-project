@@ -1,0 +1,28 @@
+.select-hide-option {
+  display: none;
+}
+
+.field .underline {
+  position: absolute;
+  height: 0px;
+  width: 101%;
+  bottom: -10px;
+  padding-top: 2px;
+}
+
+.field .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #487254;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.field input:focus ~ .underline:before,
+.field input:valid ~ .underline:before,
+.field select:focus ~ .underline:before,
+.field select:valid ~ .underline:before {
+  transform: scaleX(1);
+}

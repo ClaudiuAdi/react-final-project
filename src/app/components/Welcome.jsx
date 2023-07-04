@@ -5,7 +5,7 @@ import { haviland, poppins } from "../utils/fonts";
 function Welcome() {
   return (
     <>
-      <div className={styles["welcome-text"]}>
+      <section className={styles["welcome-text"]}>
         <h1>
           <span className={haviland.className + " " + styles.handwritten}>
             <span className={styles["handwritten-first-letter"]}>M</span>
@@ -44,7 +44,7 @@ function Welcome() {
             LEARN MORE
           </button>
         </div>
-      </div>
+      </section>
     </>
   );
 }

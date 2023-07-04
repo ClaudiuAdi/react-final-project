@@ -6,7 +6,7 @@ import sandals_royal from "../resources/royal-engage-image.jpg";
 
 function Engage() {
   return (
-    <div className={styles["engage-section"]}>
+    <section className={styles["engage-section"]}>
       <h2 className={prata.className + " " + styles["engage-title"]}>
         <span>Here, our hotels become </span>
         your paradise.
@@ -30,7 +30,7 @@ function Engage() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

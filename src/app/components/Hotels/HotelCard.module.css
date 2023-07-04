@@ -1,32 +1,3 @@
-.hotel-section {
-  padding: 85px 7%;
-  padding-bottom: 150px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px; */
-}
-
-.hotel-section-title {
-  padding-left: 8px;
-  font-size: 55px;
-  /* padding-bottom: 20px; */
-  padding-bottom: 35px;
-}
-
-.hotel-section-title span {
-  font-size: 100px;
-  color: #487254;
-}
-
-.hotels {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-}
-
 .hotel {
   width: 500px;
   height: 600px;
