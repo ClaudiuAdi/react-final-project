@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./AdvantageCard.module.css";
-import Icon from "./Icon";
+import Icon from "../Icon";
 
 function AdvantageCard(props) {
   return (

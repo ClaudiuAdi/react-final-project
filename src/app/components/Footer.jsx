@@ -17,7 +17,7 @@ function Footer() {
   const socialIcons = [FacebookLogo, InstagramLogo, LinkedinLogo];
 
   return (
-    <div className={styles["footer-section"]}>
+    <footer className={styles["footer-section"]}>
       <div className={styles["footer-image-overlay"] + " " + poppins.className}>
         <div className={styles["footer-contact"]}>
           <div className={styles["footer-logo"]}>Chess travels</div>
@@ -64,7 +64,7 @@ function Footer() {
         </div>
         <div className={styles["footer-copyright"]}>All rights reserved © </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

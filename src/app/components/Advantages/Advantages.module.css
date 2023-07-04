@@ -1,10 +1,10 @@
-.advantages-container {
+.advantages-section {
   padding: 150px 0;
   border-top: 2px solid #dad5c2;
 }
 
-.advantages-section {
-  background-image: url("../resources/palm_trees.jpg");
+.advantages-container {
+  background-image: url("../../resources/palm_trees.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
