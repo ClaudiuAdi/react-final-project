@@ -3,16 +3,18 @@
   width: 100%;
   padding: 40px 60px;
   background-color: #dad5c2;
-  background-color: #fff;
+  background-color: #f6f3e9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid #dad5c2;
+  border-left: none;
 }
 
 .form-inputs {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 45px;
 }
 
 /* .field {
@@ -76,7 +78,7 @@
 }
 
 .form-inputs div input,
-.form-inputs .field select {
+.form-inputs div select {
   width: 100%;
   border: none;
   border-bottom: 2px solid #aaa;
@@ -88,6 +90,7 @@
   height: 40px;
   margin: 8px 0;
   font-size: 20px;
+  background-color: #f6f3e9;
 }
 
 .form-inputs .field select {
@@ -137,42 +140,8 @@
 
 .form-inputs .form-grouped-inputs > * {
   width: auto;
-  min-width: 35%;
+  min-width: 36%;
 }
-
-/* .field .underline {
-  position: absolute;
-  height: 0px;
-  width: 101%;
-  bottom: -10px;
-  padding-top: 2px;
-}
-
-.form-input-hotel .underline,
-.form-grouped-inputs > .form-input-nights-number .underline {
-  bottom: -6px;
-}
-
-.form-grouped-inputs > .form-input-booking-date .underline {
-  bottom: -8px;
-}
-
-.field .underline:before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: #487254;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
-.field input:focus ~ .underline:before,
-.field input:valid ~ .underline:before,
-.field select:focus ~ .underline:before,
-.field select:valid ~ .underline:before {
-  transform: scaleX(1);
-} */
 
 /*  */
 
