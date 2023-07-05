@@ -5,12 +5,12 @@ import { poppins } from "../../utils/fonts";
 import hotelsJson from "../../data/hotels.json";
 import BookingFormInput from "./BookingFormInput";
 
-function BookingForm() {
-  const hotelsArray = JSON.parse(JSON.stringify(hotelsJson)).map(
-    (hotel) => hotel.name
-  );
-  const hotelNights = [3, 7, 10, 14, 30];
+const hotelsArray = JSON.parse(JSON.stringify(hotelsJson)).map(
+  (hotel) => hotel.name
+);
+const hotelNights = [3, 7, 10, 14, 30];
 
+function BookingForm() {
   return (
     <form className={styles.form + " " + poppins.className}>
       <div className={styles["form-inputs"]}>

@@ -1,12 +1,13 @@
 .testimonials-section {
-  border-top: 2px solid #dad5c2;
+  /* border-top: 2px solid #dad5c2; */
   display: flex;
   align-items: center;
   height: 850px;
   position: relative;
+  margin-top: -3px;
 }
 
-.title-section {
+/* .title-section {
   width: 10px;
   display: flex;
   height: 100%;
@@ -37,12 +38,11 @@
 
 .last-bar {
   height: 68%;
-}
+} */
 
 .testimonial-photo-part {
-  border: 2px solid #dad5c2;
-  border-right: none;
-  border-left: none;
+  border-bottom: 2px solid #dad5c2;
+  border-right: 2px solid #dad5c2;
   height: 100%;
   width: 51%;
   display: flex;
@@ -89,8 +89,10 @@
 .testimonial-quotations {
   position: absolute;
   transform: rotate(180deg);
-  height: 140px;
-  top: 0;
+  height: 200px;
+  top: 30px;
+  left: 50px;
+  z-index: -1;
 }
 
 .testimonial-text {
