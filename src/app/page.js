@@ -9,7 +9,7 @@ import Hotels from "./components/Hotels/Hotels";
 import Advantages from "./components/Advantages/Advantages";
 import Booking from "./components/Booking/Booking";
 import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import WelcomeImage from "./components/WelcomeImage";
 
 export default function Home() {
