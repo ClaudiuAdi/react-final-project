@@ -7,27 +7,9 @@ function Welcome() {
     <>
       <section className={styles["welcome-text"]}>
         <h1>
-          <span className={haviland.className + " " + styles.handwritten}>
-            <span className={styles["handwritten-first-letter"]}>M</span>
-            emorable
-          </span>
-          <br />
           Hotels for
-          <div>
-            moments
-            <span className={haviland.className + " " + styles.handwritten}>
-              {/* <span className={styles["handwritten-first-letter"]}>R</span>ich */}
-              {/* <span className={styles["handwritten-first-letter"]}>O</span>verflowing */}
-              {/* <span className={styles["handwritten-first-letter"]}>L</span>uxuriant */}
-              {/* <span className={styles["handwritten-first-letter"]}>L</span>avish */}
-              {/* <span className={styles["handwritten-first-letter"]}>G</span>rand */}
-              {/* <span className={styles["handwritten-first-letter"]}>P</span>lentiful */}
-              {/* <span className={styles["handwritten-first-letter"]}>O</span>pulent */}
-              <span className={styles["handwritten-first-letter"]}>A</span>
-              bundant
-            </span>
-          </div>
-          in emotions
+          <br />
+          moments in emotions
         </h1>
         <h2 className={styles["encouraging-text"]}>
           Book now and get the best prices

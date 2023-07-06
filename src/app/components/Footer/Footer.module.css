@@ -16,6 +16,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
+  /* var 2 */
+  /* background-color: rgba(235, 235, 237, 1); */
+  background-color: rgba(255, 255, 255, 1);
+  background-color: #1a1e23;
+  color: #1a1e23;
+  color: #fff;
 }
 
 .footer-contact {
@@ -38,6 +45,11 @@
 .footer-socials > a {
   text-decoration: none;
   color: #fff;
+
+  /* var 2 */
+  color: #1a1e23;
+  color: #f8d8af;
+  color: #ebebed;
 }
 
 .footer-contact-details > a:hover {

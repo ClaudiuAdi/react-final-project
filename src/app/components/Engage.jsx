@@ -8,8 +8,7 @@ function Engage() {
   return (
     <section className={styles["engage-section"]}>
       <h2 className={prata.className + " " + styles["engage-title"]}>
-        <span>Here, our hotels become </span>
-        your paradise.
+        Here, our hotels become your paradise.
       </h2>
       <div className={poppins.className + " " + styles["engage-description"]}>
         We draw inspiration from the splendors of luxury travel and curating

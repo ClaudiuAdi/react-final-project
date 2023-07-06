@@ -6,6 +6,10 @@
   align-items: center;
   gap: 40px;
   padding: 180px 0 150px;
+
+  /* var 2 */
+  background-color: #1a1e23;
+  background-color: #fff;
 }
 
 .section-title-tag {
@@ -17,12 +21,16 @@
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 2px;
+
+  /* var 2 */
+  color: #f8d8af;
 }
 
 .section-engaging-subtitle {
   font-size: 40px;
   text-align: center;
   line-height: 50px;
+  color: #1a1e23;
 }
 
 .form-card {

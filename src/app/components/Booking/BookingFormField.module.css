@@ -19,6 +19,9 @@
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
+
+  /* var 2 */
+  background: #f8d8af;
 }
 .field input:focus ~ .underline:before,
 .field input:valid ~ .underline:before,

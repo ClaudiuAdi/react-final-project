@@ -4,7 +4,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 2px solid #dad5c2;
+  /* border-bottom: 2px solid #dad5c2; */
+
+  /* var 2 */
+  background-color: #fff;
+  background-color: #2f3740;
+  /* border-bottom: 2px solid #ebebed; */
 }
 
 .logo {
@@ -20,5 +25,10 @@
 .link {
   text-decoration: none;
   color: #52514e;
+  /* var 2 */
+  /* color: #2f3740; */
+  color: #f8d8af;
+  color: #2f3740;
+  color: #fff;
   font-size: 16px;
 }

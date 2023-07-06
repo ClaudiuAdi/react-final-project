@@ -12,11 +12,17 @@
   font-size: 55px;
   /* padding-bottom: 20px; */
   padding-bottom: 35px;
+
+  /* var 2 */
+  color: #fff;
 }
 
 .hotel-section-title span {
   font-size: 100px;
   color: #487254;
+
+  /* var 2 */
+  color: #f8d8af;
 }
 
 .hotels {
