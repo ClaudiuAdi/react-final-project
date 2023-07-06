@@ -13,18 +13,23 @@ function Testimonials() {
     <>
       <SectionTitle title={"TESTIMONIALS"} axis={"horizontal"} />
       <section className={styles["testimonials-section"]}>
-        <div className={styles["testimonial-photo-part"]}>
+        <button className={styles["left-button"]}>
+          <Icon
+            icon={ArrowLeft}
+            weight="regular"
+            className={styles["advantage-icon"]}
+          />
+        </button>
+        <div className={styles["testimonial"]}>
           <div className={styles["testimonial-photo-container"]}>
             <img src={john_dias.src} alt="User testimonial image" />
           </div>
-        </div>
-        <div className={styles["testimonial"]}>
           <div className={styles["testimonial-info"] + " " + prata.className}>
-            <img
+            {/* <img
               className={styles["testimonial-quotations"]}
               src={quotations_image.src}
               alt=""
-            />
+            /> */}
             <h2 className={styles["testimonial-text"]}>
               They are not typical hotels you see out there. They have taken
               care of every last detail. They are very comfortable and the truth
@@ -41,26 +46,14 @@ function Testimonials() {
               </span>
             </div>
           </div>
-          <div className={styles["testimonial-navigation"]}>
-            <div className={styles["navigation-buttons"]}>
-              <button className={styles["left-button"]}>
-                <Icon
-                  icon={ArrowLeft}
-                  weight="regular"
-                  className={styles["advantage-icon"]}
-                />
-              </button>
-              <button className={styles["right-button"]}>
-                <Icon
-                  icon={ArrowRight}
-                  weight="regular"
-                  className={styles["advantage-icon"]}
-                />
-              </button>
-            </div>
-            <span className={styles["big-bar"]}></span>
-          </div>
         </div>
+        <button className={styles["right-button"]}>
+          <Icon
+            icon={ArrowRight}
+            weight="regular"
+            className={styles["advantage-icon"]}
+          />
+        </button>
       </section>
     </>
   );

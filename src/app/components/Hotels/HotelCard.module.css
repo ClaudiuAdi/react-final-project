@@ -5,6 +5,12 @@
   color: #52514e;
   animation: all 0.5s;
   overflow: hidden;
+
+  /* var 2 */
+  background-color: #ebebed;
+  background-color: #1a1e23;
+  /* border: 2px solid #ebebed;
+  border: 2px solid #1a1e23; */
 }
 
 .hotel-image-container {
@@ -25,7 +31,7 @@
 }
 
 .hotel-information {
-  border: 2px solid #dad5c2;
+  /* border: 2px solid #ebebed; */
   border-top: none;
   /* padding: 2.2rem 2.8rem 1rem 3.8rem; */
   padding: 2.2rem 2.8rem 1.5rem 3.8rem;
@@ -40,18 +46,27 @@
   font-size: 1.7rem;
   font-weight: 600;
   padding-bottom: 26px;
+
+  /* var 2 */
+  color: #fff;
 }
 
 .hotel-price {
   color: #487254;
   font-size: 1.8rem;
   font-weight: 500;
+
+  /* var 2 */
+  color: #f8d8af;
 }
 
 .hotel-price span {
   color: #a0a0a0;
   font-weight: 400;
   font-size: 1.3rem;
+
+  /* var 2 */
+  color: #ebebeb;
 }
 
 .hotel-extra-info {
@@ -61,16 +76,25 @@
 
 .hotel-breakfast-price {
   color: #a0a0a0;
+
+  /* var 2 */
+  color: #ebebeb;
 }
 
 .hotel-extra-info-rating {
-  background-color: #dad5c2;
+  background-color: #2f3740;
   color: #f6f3e9;
   padding: 10px 15px;
   width: fit-content;
   position: absolute;
-  right: 2.8rem;
+  /* right: 2.8rem; */
   /* bottom: 1.2rem; */
-  bottom: 1.4rem;
+  /* var 2: bottom: 1.4rem; */
   font-size: 1.4rem;
+
+  /* var 2 */
+  background-color: #1a1e23;
+  color: #f8d8af;
+  right: 3rem;
+  top: -4rem;
 }

@@ -1,9 +1,4 @@
-import { Mr_De_Haviland, Prata, Poppins } from "next/font/google";
-
-export const haviland = Mr_De_Haviland({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { Prata, Poppins } from "next/font/google";
 
 export const prata = Prata({
   subsets: ["latin"],

@@ -23,7 +23,7 @@ function FooterSocials(props) {
     <div className={props.className}>
       {socialIcons.map((social, index) => (
         <a href={social.link} key={index} target="_blank">
-          <Icon icon={social.logo} weight="regular" />
+          <Icon icon={social.logo} weight="thin" />
         </a>
       ))}
     </div>

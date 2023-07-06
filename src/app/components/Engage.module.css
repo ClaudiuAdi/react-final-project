@@ -7,6 +7,11 @@
 .engage-title,
 .engage-description {
   padding: 0 17%;
+
+  /* var 2 */
+  background-color: #2f3740;
+  color: #fff;
+  color: #f8d8af;
 }
 
 .engage-title {
@@ -16,12 +21,17 @@
   align-self: center;
   font-size: 40px;
   line-height: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  /* var 2 */
+  border-top: 2px solid #f8d8af;
 }
 
 .engage-description {
   grid-column: 2;
   grid-row: 1;
-  border-left: 2px solid #dad5c2;
   text-align: right;
   font-weight: 400;
   font-size: 20px;
@@ -29,17 +39,24 @@
   padding: 70px 140px;
   padding-left: 20%;
   line-height: 30px;
+
+  /* var 2 */
+  border-left: 2px solid #f8d8af;
+  color: #fff;
 }
 
 .engage-more {
   grid-column: 1/3;
   grid-row: 2;
-  border-top: 2px solid #dad5c2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 60px;
+
+  /* var 2 */
+  background-color: #2f3740;
+  border-top: 2px solid #f8d8af;
 }
 
 .engage-more-text-container {
@@ -54,14 +71,19 @@
   margin: 0 200px;
   text-align: center;
   line-height: 60px;
+
+  /* var  2 */
+  color: #fff;
 }
 
 .engage-button {
-  background-color: #487254;
-  color: #fff;
   padding: 20px 40px;
   font-size: 16px;
   letter-spacing: 2px;
+
+  /* var 2 */
+  background-color: #f8d8af;
+  color: #1a1e23;
 }
 
 .image {

@@ -8,6 +8,10 @@
   padding-left: 17%;
   grid-column: 1;
   grid-row: 2;
+
+  /* var 2 */
+  background-color: #2f3740;
+  color: #f8d8af;
 }
 
 .encouraging-text {
@@ -15,12 +19,20 @@
   color: #52514e;
   text-align: left;
   font-weight: 500;
+
+  /* var 2 */
+  color: #f8d8af;
+  color: #ebebed;
 }
 
 .handwritten {
   font-size: 85px;
   padding-left: 30px;
   color: #487254;
+
+  /* var 2 */
+  color: #f8d8af;
+  display: none;
 }
 
 .handwritten-first-letter {
@@ -37,12 +49,15 @@
 }
 
 .booking-button {
-  border: 1px solid #487254;
-  background-color: #487254;
   color: #fff;
   padding: 20px 40px;
   font-size: 16px;
   letter-spacing: 2px;
+
+  /* var 2 */
+  border: 1px solid #f8d8af;
+  background-color: #f8d8af;
+  color: #1a1e23;
 }
 
 .learn-more-button {
@@ -51,4 +66,7 @@
   padding: 20px 40px;
   font-size: 16px;
   letter-spacing: 2px;
+
+  /* var 2 */
+  color: #1a1e23;
 }

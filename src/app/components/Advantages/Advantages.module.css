@@ -1,6 +1,8 @@
 .advantages-section {
   padding: 150px 0;
-  border-top: 2px solid #dad5c2;
+
+  /* var 2 */
+  border-top: 2px solid #f8d8af;
 }
 
 .advantages-container {
@@ -20,6 +22,10 @@
   align-items: center;
   justify-content: center;
   gap: 100px;
+
+  /* var 2 */
+  background-color: rgba(235, 235, 237, 1);
+  color: #1a1e23;
 }
 
 .advantages {

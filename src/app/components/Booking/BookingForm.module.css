@@ -7,8 +7,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid #dad5c2;
+  /* border: 2px solid #dad5c2; */
   border-left: none;
+
+  /* var 2 */
+  background-color: #ebebed;
+  background-color: #2f3740;
 }
 
 .form-inputs {
@@ -91,6 +95,12 @@
   margin: 8px 0;
   font-size: 20px;
   background-color: #f6f3e9;
+
+  /* var 2 */
+  /* background-color: #ebebed; */
+  background-color: #2f3740;
+  color: #1a1e23;
+  color: #fff;
 }
 
 .form-inputs .field select {
@@ -109,6 +119,9 @@
   font-size: 15px;
   color: #487254;
   font-weight: 500;
+
+  /* var 2 */
+  color: #f8d8af;
 }
 
 .form-inputs .field label {
@@ -119,6 +132,10 @@
   pointer-events: none;
   transition: all 0.3s ease;
   font-size: 20px;
+
+  /* var 2 */
+  color: #1a1e23;
+  color: #ebebed;
 }
 
 .form-input-booking-date input:focus ~ label,
@@ -131,6 +148,9 @@
   font-size: 15px;
   color: #487254;
   font-weight: 500;
+
+  /* var 2 */
+  color: #f8d8af;
 }
 
 .form-inputs > .breakfast-input label {
@@ -162,4 +182,9 @@
   padding: 20px 40px;
   font-size: 16px;
   letter-spacing: 2px;
+
+  /* var 2 */
+  background-color: #1a1e23;
+  background-color: #f8d8af;
+  color: #1a1e23;
 }
