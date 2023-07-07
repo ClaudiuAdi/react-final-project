@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styles from "./FooterMenu.module.css";
 import { Circle } from "@phosphor-icons/react";
 import Icon from "../Icon";
@@ -33,8 +33,8 @@ function FooterMenu(props) {
       <div className={styles["footer-menu"]}>
         {footerMenuLinks.map((link, index) => {
           return (
-            <>
-              <a key={index} href={link.link} target="_blank">
+            <Fragment key={index}>
+              <a href={link.link} target="_blank">
                 {link.title}
               </a>
               {link.title !== "Privacy Policy" && (
@@ -44,7 +44,7 @@ function FooterMenu(props) {
                   className={styles["footer-menu-container-circle"]}
                 />
               )}
-            </>
+            </Fragment>
           );
         })}
       </div>

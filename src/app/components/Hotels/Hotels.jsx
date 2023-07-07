@@ -6,7 +6,7 @@ import SectionTitle from "../SectionTitle";
 import HotelCard from "./HotelCard";
 
 function Hotels() {
-  const hotelsArray = JSON.parse(JSON.stringify(hotelsJson));
+  // const hotelsArray = JSON.parse(JSON.stringify(hotelsJson));
 
   return (
     <>
@@ -16,7 +16,7 @@ function Hotels() {
           Your paradise Retreat
         </p>
         <div className={styles["hotels"]}>
-          {hotelsArray.map((hotel) => (
+          {hotelsJson.map((hotel) => (
             <HotelCard key={hotel.name} hotel={hotel} />
           ))}
         </div>

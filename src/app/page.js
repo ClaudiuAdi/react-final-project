@@ -8,7 +8,7 @@ import Engage from "./components/Engage";
 import Hotels from "./components/Hotels/Hotels";
 import Advantages from "./components/Advantages/Advantages";
 import Booking from "./components/Booking/Booking";
-import Testimonials from "./components/Testimonials";
+import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import WelcomeImage from "./components/WelcomeImage";
 
