@@ -47,8 +47,6 @@
   color: #fff;
 
   /* var 2 */
-  color: #1a1e23;
-  color: #f8d8af;
   color: #ebebed;
 }
 
@@ -57,7 +55,7 @@
 }
 
 .footer-socials > a:hover {
-  color: #487254;
+  color: #f8d8af;
   transition: 0.3s;
 }
 

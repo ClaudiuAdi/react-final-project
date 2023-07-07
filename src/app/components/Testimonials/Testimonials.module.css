@@ -1,0 +1,42 @@
+.testimonials-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 850px;
+  margin-top: -3px;
+  border-bottom: 2px solid #f8d8af;
+}
+
+.testimonial {
+  /* border: 2px solid red; */
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  background-color: #1a1e23;
+  height: 600px;
+}
+
+.left-button,
+.right-button {
+  width: 70px;
+  height: 70px;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* var 2 */
+  border: 1px solid #f8d8af;
+  background-color: #2f3740;
+  color: #f8d8af;
+  transition: 0.2s all ease-in;
+}
+
+.left-button:hover,
+.right-button:hover {
+  color: #2f3740;
+  background-color: #f8d8af;
+}
