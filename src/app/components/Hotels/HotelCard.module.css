@@ -7,10 +7,8 @@
   overflow: hidden;
 
   /* var 2 */
-  background-color: #ebebed;
+  /* background-color: #2f3740; */
   background-color: #1a1e23;
-  /* border: 2px solid #ebebed;
-  border: 2px solid #1a1e23; */
 }
 
 .hotel-image-container {
@@ -34,12 +32,15 @@
   /* border: 2px solid #ebebed; */
   border-top: none;
   /* padding: 2.2rem 2.8rem 1rem 3.8rem; */
-  padding: 2.2rem 2.8rem 1.5rem 3.8rem;
+  padding: 2.2rem 2.8rem 1.4rem 3.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
   position: relative;
+
+  /* border: 2px solid #1a1e23;
+  border-top: none; */
 }
 
 .hotel-title {
