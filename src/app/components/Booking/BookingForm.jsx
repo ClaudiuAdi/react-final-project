@@ -1,25 +1,88 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./BookingForm.module.css";
 import BookingFormField from "./BookingFormField";
 import { poppins } from "../../utils/fonts";
 import hotelsJson from "../../data/hotels.json";
 import BookingFormInput from "./BookingFormInput";
+import useInput from "../../hooks/use-input";
 
 const hotelsArray = JSON.parse(JSON.stringify(hotelsJson)).map(
   (hotel) => hotel.name
 );
 const hotelNights = [3, 7, 10, 14, 30];
 
+// const today = new Date().toISOString().split("T")[0];
+const today = new Date().toLocaleDateString("ro-RO");
+
 function BookingForm() {
+  const {
+    value: enteredFullName,
+    enteredValueInputIsInvalid: fullNameInputIsInvalid,
+    setEnteredValueIsValid: setEnteredFullNameIsValid,
+    setEnteredValueFieldIsTouched: setEnteredFullNameIsTouched,
+    enteredValueChangeHandler: fullNameInputChangeHandler,
+    reset: resetEnteredFullName,
+  } = useInput();
+
+  const {
+    value: enteredDate,
+    enteredValueInputIsInvalid: dateInputIsInvalid,
+    setEnteredValueIsValid: setEnteredDateIsValid,
+    setEnteredValueFieldIsTouched: setEnteredDateIsTouched,
+    enteredValueChangeHandler: dateInputChangeHandler,
+    reset: resetEnteredDate,
+  } = useInput();
+
+  const {
+    value: enteredNumberOfGuests,
+    enteredValueInputIsInvalid: numberOfGuestsIsInvalid,
+    setEnteredValueIsValid: setEnteredNumberOfGuestsIsValid,
+    setEnteredValueFieldIsTouched: setEnteredNumberOfGuestsIsTouched,
+    enteredValueChangeHandler: numberOfGuestsInputChangeHandler,
+    reset: resetEnteredNumberOfGuests,
+  } = useInput();
+
+  const formSubmissionHandler = (event) => {
+    event.preventDefault();
+
+    setEnteredFullNameIsTouched(true);
+    setEnteredDateIsTouched(true);
+
+    if (enteredFullName.trim() === "") {
+      setEnteredFullNameIsValid(false);
+      return;
+    }
+
+    if (enteredDate < today) {
+      setEnteredDateIsValid(false);
+      return;
+    }
+
+    setEnteredFullNameIsValid(true);
+    setEnteredDateIsValid(true);
+
+    resetEnteredFullName();
+    resetEnteredDate();
+  };
+
   return (
-    <form className={styles.form + " " + poppins.className}>
+    <form
+      noValidate
+      className={styles.form + " " + poppins.className}
+      onSubmit={formSubmissionHandler}
+    >
       <div className={styles["form-inputs"]}>
         <BookingFormField
           category="input"
           id="name"
           inputType="text"
           label="Full Name"
-          className={styles["form-input-name"] + " " + styles.field}
+          onChange={fullNameInputChangeHandler}
+          value={enteredFullName}
+          className={`${styles.field} ${
+            fullNameInputIsInvalid && styles.invalid
+          }`}
+          isValid={!fullNameInputIsInvalid}
         />
         <BookingFormField
           category="select"
@@ -34,7 +97,10 @@ function BookingForm() {
             id="booking-date"
             inputType="date"
             label="Check-in date"
-            className={styles["form-input-booking-date"] + " " + styles.field}
+            className={`${styles["form-input-booking-date"]} ${styles.field} ${
+              dateInputIsInvalid && styles.invalid
+            }`}
+            isValid={!dateInputIsInvalid}
           />
           <BookingFormField
             category="select"
@@ -57,6 +123,9 @@ function BookingForm() {
           <BookingFormInput inputType="checkbox" id="breakfast" />
         </span>
       </div>
+      {fullNameInputIsInvalid && (
+        <p className={styles["error-text"]}>FullName must not be empty.</p>
+      )}
       <button className={styles["button-submit"]}>SUBMIT</button>
     </form>
   );

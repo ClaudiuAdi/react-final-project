@@ -21,55 +21,6 @@
   gap: 45px;
 }
 
-/* .field {
-  display: flex;
-  flex-direction: column;
-  font-weight: 600;
-}
-
-.breakfast-input,
-.form-grouped-inputs {
-  display: flex;
-  flex-direction: row;
-}
-
-.form-grouped-inputs {
-  justify-content: space-between;
-}
-
-.form > div > div > input,
-.form > div > div > select,
-.form-input-booking-date > input,
-.form-input-nights-number > select {
-  outline: none;
-  font-weight: 400;
-  color: #52514e;
-  border: 1px solid #f6f3e9;
-  padding: 5px 16px;
-  height: 42px;
-  margin: 8px 0;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
-  font-size: 16px;
-}
-
-.form > div > div > select,
-.form-input-nights-number > select {
-  height: 54px;
-}
-
-.breakfast-input {
-  display: flex;
-  align-items: center;
-}
-
-.button-submit {
-  background-color: #487254;
-  color: #fff;
-  padding: 20px 40px;
-  font-size: 16px;
-  letter-spacing: 2px;
-} */
-
 /* varianta misto */
 .form-inputs .field {
   height: 40px;
@@ -81,61 +32,12 @@
   justify-content: space-between;
 }
 
-.form-inputs div input,
-.form-inputs div select {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #aaa;
-  background-color: #dad5c2;
-  background-color: #fff;
-  outline: none;
-  font-weight: 400;
-  color: #52514e;
-  height: 40px;
-  margin: 8px 0;
-  font-size: 20px;
-  background-color: #f6f3e9;
-
-  /* var 2 */
-  /* background-color: #ebebed; */
-  background-color: #2f3740;
-  color: #1a1e23;
-  color: #fff;
-}
-
 .form-inputs .field select {
   height: 44px;
 }
 
 .form-inputs div input[type="date"] {
   height: 42px;
-}
-
-.field input:focus ~ label,
-.field input:valid ~ label,
-.field select:focus ~ label,
-.field select:valid ~ label {
-  transform: translateY(-20px);
-  font-size: 15px;
-  color: #487254;
-  font-weight: 500;
-
-  /* var 2 */
-  color: #f8d8af;
-}
-
-.form-inputs .field label {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  color: #52514e;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  font-size: 20px;
-
-  /* var 2 */
-  color: #1a1e23;
-  color: #ebebed;
 }
 
 .form-input-booking-date input:focus ~ label,
@@ -151,6 +53,11 @@
 
   /* var 2 */
   color: #f8d8af;
+}
+
+.form-inputs > .form-grouped-inputs > .invalid label {
+  /* var 2 */
+  color: #b00020;
 }
 
 .form-inputs > .breakfast-input label {
@@ -187,4 +94,36 @@
   background-color: #1a1e23;
   background-color: #f8d8af;
   color: #1a1e23;
+}
+
+.invalid input {
+  border-bottom: 2px solid #b00020;
+}
+
+.invalid label {
+  color: #b00020;
+}
+
+.error-text {
+  color: #b00020;
+}
+
+.invalid input:focus ~ label,
+.invalid input:valid ~ label,
+.invalid select:focus ~ label,
+.invalid select:valid ~ label {
+  /* var 2 */
+  color: #b00020;
+}
+
+.invalid .underline:before {
+  /* var 2 */
+  background: red;
+}
+
+.invalid input:focus ~ .underline:before,
+.invalid input:valid ~ .underline:before,
+.invalid select:focus ~ .underline:before,
+.invalid select:valid ~ .underline:before {
+  transform: scaleX(0);
 }

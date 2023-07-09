@@ -23,9 +23,66 @@
   /* var 2 */
   background: #f8d8af;
 }
+
 .field input:focus ~ .underline:before,
 .field input:valid ~ .underline:before,
 .field select:focus ~ .underline:before,
 .field select:valid ~ .underline:before {
   transform: scaleX(1);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background-color: #dad5c2;
+  background-color: #fff;
+  outline: none;
+  font-weight: 400;
+  color: #52514e;
+  height: 40px;
+  margin: 8px 0;
+  font-size: 20px;
+  background-color: #f6f3e9;
+
+  /* var 2 */
+  /* background-color: #ebebed; */
+  background-color: #2f3740;
+  color: #1a1e23;
+  color: #fff;
+}
+
+.input-label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #52514e;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 20px;
+
+  /* var 2 */
+  color: #1a1e23;
+  color: #ebebed;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label,
+.field select:focus ~ label,
+.field select:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #487254;
+  font-weight: 500;
+
+  /* var 2 */
+  color: #f8d8af;
+}
+
+.invalid .underline:before,
+.invalid .underline:before,
+.invalid .underline:before,
+.invalid .underline:before {
+  background-color: red;
 }
