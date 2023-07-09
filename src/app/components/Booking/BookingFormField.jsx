@@ -9,27 +9,35 @@ function BookingFormField(props) {
       <BookingFormInput
         inputType={props.inputType}
         id={props.id}
-        required
-        className={props.className}
+        value={props.value}
+        onChange={props.onChange}
       />
     ) : (
       <BookingFormSelect
         id={props.id}
         selectArray={props.selectArray}
-        className={
-          styles["select-hide-option"] +
-          " " +
-          props.className +
-          " " +
-          styles.asd
-        }
+        className={styles["select-hide-option"]}
       />
     );
 
   return (
     <div className={`${props.className} ${styles.field}`}>
-      {input}
-      <div className={`${styles["underline"]}`}></div>
+      {props.category === "input" ? (
+        <BookingFormInput
+          inputType={props.inputType}
+          id={props.id}
+          required
+          value={props.value}
+          onChange={props.onChange}
+        />
+      ) : (
+        <BookingFormSelect
+          id={props.id}
+          selectArray={props.selectArray}
+          className={styles["select-hide-option"]}
+        />
+      )}
+      {props.isValid && <div className={`${styles["underline"]}`}></div>}
       <label className={styles["input-label"]} htmlFor={props.id}>
         {props.label}
       </label>
