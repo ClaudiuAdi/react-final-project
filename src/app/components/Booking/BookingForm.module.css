@@ -45,19 +45,13 @@
   transform: none;
 }
 
-.form-inputs > .form-grouped-inputs > .form-input-booking-date label {
+.form-grouped-inputs > .form-input-booking-date label {
   bottom: 30px;
   font-size: 15px;
-  color: #487254;
   font-weight: 500;
 
   /* var 2 */
-  color: #f8d8af;
-}
-
-.form-inputs > .form-grouped-inputs > .invalid label {
-  /* var 2 */
-  color: #b00020;
+  /* color: #f8d8af; */
 }
 
 .form-inputs > .breakfast-input label {
@@ -67,7 +61,7 @@
 
 .form-inputs .form-grouped-inputs > * {
   width: auto;
-  min-width: 36%;
+  min-width: 40%;
 }
 
 /*  */
@@ -83,6 +77,10 @@
   align-items: center;
 }
 
+.breakfast-input label {
+  color: #ebebed;
+}
+
 .button-submit {
   background-color: #487254;
   color: #fff;
@@ -96,7 +94,8 @@
   color: #1a1e23;
 }
 
-.invalid input {
+.invalid input,
+.invalid select {
   border-bottom: 2px solid #b00020;
 }
 
@@ -104,7 +103,7 @@
   color: #b00020;
 }
 
-.error-text {
+.form-grouped-inputs > .invalid label {
   color: #b00020;
 }
 
@@ -112,18 +111,13 @@
 .invalid input:valid ~ label,
 .invalid select:focus ~ label,
 .invalid select:valid ~ label {
-  /* var 2 */
   color: #b00020;
 }
 
 .invalid .underline:before {
-  /* var 2 */
-  background: red;
+  background: #b00020;
 }
 
-.invalid input:focus ~ .underline:before,
-.invalid input:valid ~ .underline:before,
-.invalid select:focus ~ .underline:before,
-.invalid select:valid ~ .underline:before {
-  transform: scaleX(0);
+.error-text {
+  color: #b00020;
 }

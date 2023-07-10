@@ -1,131 +1,154 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./BookingForm.module.css";
 import BookingFormField from "./BookingFormField";
 import { poppins } from "../../utils/fonts";
 import hotelsJson from "../../data/hotels.json";
 import BookingFormInput from "./BookingFormInput";
-import useInput from "../../hooks/use-input";
+import validateForm from "../../functions/validate";
 
-const hotelsArray = JSON.parse(JSON.stringify(hotelsJson)).map(
-  (hotel) => hotel.name
-);
+export const hotelsArray = hotelsJson.map((hotel) => hotel.name);
 const hotelNights = [3, 7, 10, 14, 30];
 
-// const today = new Date().toISOString().split("T")[0];
-const today = new Date().toLocaleDateString("ro-RO");
-
 function BookingForm() {
-  const {
-    value: enteredFullName,
-    enteredValueInputIsInvalid: fullNameInputIsInvalid,
-    setEnteredValueIsValid: setEnteredFullNameIsValid,
-    setEnteredValueFieldIsTouched: setEnteredFullNameIsTouched,
-    enteredValueChangeHandler: fullNameInputChangeHandler,
-    reset: resetEnteredFullName,
-  } = useInput();
+  const [inputFields, setInputFields] = useState({
+    fullName: "",
+    hotel: "",
+    checkInDate: "",
+    numberOfNights: 10,
+    numberOfGuests: 2,
+    breakfast: false,
+  });
+  const [errors, setErrors] = useState({});
 
-  const {
-    value: enteredDate,
-    enteredValueInputIsInvalid: dateInputIsInvalid,
-    setEnteredValueIsValid: setEnteredDateIsValid,
-    setEnteredValueFieldIsTouched: setEnteredDateIsTouched,
-    enteredValueChangeHandler: dateInputChangeHandler,
-    reset: resetEnteredDate,
-  } = useInput();
+  let formIsValid = false;
 
-  const {
-    value: enteredNumberOfGuests,
-    enteredValueInputIsInvalid: numberOfGuestsIsInvalid,
-    setEnteredValueIsValid: setEnteredNumberOfGuestsIsValid,
-    setEnteredValueFieldIsTouched: setEnteredNumberOfGuestsIsTouched,
-    enteredValueChangeHandler: numberOfGuestsInputChangeHandler,
-    reset: resetEnteredNumberOfGuests,
-  } = useInput();
-
-  const formSubmissionHandler = (event) => {
-    event.preventDefault();
-
-    setEnteredFullNameIsTouched(true);
-    setEnteredDateIsTouched(true);
-
-    if (enteredFullName.trim() === "") {
-      setEnteredFullNameIsValid(false);
-      return;
-    }
-
-    if (enteredDate < today) {
-      setEnteredDateIsValid(false);
-      return;
-    }
-
-    setEnteredFullNameIsValid(true);
-    setEnteredDateIsValid(true);
-
-    resetEnteredFullName();
-    resetEnteredDate();
+  const handleChange = (e) => {
+    setInputFields({ ...inputFields, [e.target.name]: e.target.value });
   };
+
+  const handleCheckboxChange = (e) => {
+    setInputFields({ ...inputFields, breakfast: e.target.checked });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    formIsValid = validateForm(inputFields, setErrors);
+
+    if (formIsValid) {
+      alert(
+        inputFields.fullName +
+          " " +
+          inputFields.checkInDate +
+          " " +
+          inputFields.numberOfGuests +
+          " " +
+          inputFields.hotel +
+          " " +
+          inputFields.numberOfNights +
+          " " +
+          inputFields.breakfast
+      );
+    }
+  };
+
+  // const finishSubmit = () => {
+  //   alert(
+  //     inputFields.fullName +
+  //       " " +
+  //       inputFields.checkInDate +
+  //       " " +
+  //       inputFields.numberOfGuests +
+  //       " " +
+  //       inputFields.hotel +
+  //       " " +
+  //       inputFields.numberOfNights +
+  //       " " +
+  //       inputFields.breakfast
+  //   );
+  // };
+
+  // useEffect(() => {
+  //   if (Object.keys(errors).length === 0 && submitting) {
+  //     finishSubmit();
+  //   }
+  // }, [errors]);
 
   return (
     <form
       noValidate
-      className={styles.form + " " + poppins.className}
-      onSubmit={formSubmissionHandler}
+      className={`${styles.form} ${poppins.className}`}
+      onSubmit={handleSubmit}
     >
       <div className={styles["form-inputs"]}>
         <BookingFormField
-          category="input"
-          id="name"
           inputType="text"
+          name="fullName"
           label="Full Name"
-          onChange={fullNameInputChangeHandler}
-          value={enteredFullName}
-          className={`${styles.field} ${
-            fullNameInputIsInvalid && styles.invalid
-          }`}
-          isValid={!fullNameInputIsInvalid}
+          onChange={handleChange}
+          value={inputFields.fullName}
+          className={`${styles.field} ${errors.fullName && styles.invalid}`}
+          isValid={!errors.fullName}
         />
         <BookingFormField
-          category="select"
-          id="hotel"
+          name="hotel"
           label="Hotel"
           selectArray={hotelsArray}
-          className={styles["form-input-hotel"] + " " + styles.field}
+          onChange={handleChange}
+          value={inputFields.hotel}
+          className={`${styles.field} ${errors.hotel && styles.invalid}`}
+          isValid={!errors.hotel}
         />
         <div className={styles["form-grouped-inputs"]}>
           <BookingFormField
-            category="input"
-            id="booking-date"
             inputType="date"
             label="Check-in date"
+            name="checkInDate"
+            onChange={handleChange}
+            value={inputFields.checkInDate}
             className={`${styles["form-input-booking-date"]} ${styles.field} ${
-              dateInputIsInvalid && styles.invalid
+              errors.checkInDate && styles.invalid
             }`}
-            isValid={!dateInputIsInvalid}
+            isValid={!errors.checkInDate}
           />
           <BookingFormField
-            category="select"
-            id="nights-number"
+            name="numberOfNights"
             label="Number of nights"
             selectArray={hotelNights}
+            onChange={handleChange}
+            value={inputFields.numberOfNights}
             className={styles["form-input-nights-number"] + " " + styles.field}
+            isValid
           />
         </div>
         <BookingFormField
-          category="input"
-          id="guests-number"
           inputType="number"
+          name="numberOfGuests"
           label="Number of guests"
-          className={styles["form-input-guests-number"] + " " + styles.field}
+          value={inputFields.numberOfGuests}
+          onChange={handleChange}
+          className={`${styles.field} ${
+            errors.numberOfGuests && styles.invalid
+          }`}
+          isValid={!errors.numberOfGuests}
         />
 
-        <span className={styles["breakfast-input"] + " " + styles.field}>
+        <span className={styles["breakfast-input"]}>
           <label htmlFor="breakfast">Breakfast</label>
-          <BookingFormInput inputType="checkbox" id="breakfast" />
+          <BookingFormInput
+            inputType="checkbox"
+            id="breakfast"
+            onChange={handleCheckboxChange}
+            checked={inputFields.breakfast}
+          />
         </span>
       </div>
-      {fullNameInputIsInvalid && (
-        <p className={styles["error-text"]}>FullName must not be empty.</p>
-      )}
+
+      {Object.keys(errors).map((key) => (
+        <p key={key} className={styles["error-text"]}>
+          {errors[key]}
+        </p>
+      ))}
+
       <button className={styles["button-submit"]}>SUBMIT</button>
     </form>
   );
