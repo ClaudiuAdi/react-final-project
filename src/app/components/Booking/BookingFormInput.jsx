@@ -5,10 +5,12 @@ function BookingFormInput(props) {
     <input
       required={props.inputType !== "checkbox"}
       type={props.inputType}
-      id={props.id}
       value={props.value}
       onChange={props.onChange}
       className={props.className}
+      name={props.name}
+      id={props.id}
+      checked={props.checked}
     />
   );
 }

@@ -4,42 +4,29 @@ import BookingFormInput from "./BookingFormInput";
 import BookingFormSelect from "./BookingFormSelect";
 
 function BookingFormField(props) {
-  const input =
-    props.category === "input" ? (
-      <BookingFormInput
-        inputType={props.inputType}
-        id={props.id}
-        value={props.value}
-        onChange={props.onChange}
-      />
-    ) : (
-      <BookingFormSelect
-        id={props.id}
-        selectArray={props.selectArray}
-        className={styles["select-hide-option"]}
-      />
-    );
+  const input = props.inputType ? (
+    <BookingFormInput
+      inputType={props.inputType}
+      required
+      value={props.value}
+      onChange={props.onChange}
+      name={props.name}
+    />
+  ) : (
+    <BookingFormSelect
+      name={props.name}
+      selectArray={props.selectArray}
+      onChange={props.onChange}
+      value={props.value}
+    />
+  );
 
   return (
     <div className={`${props.className} ${styles.field}`}>
-      {props.category === "input" ? (
-        <BookingFormInput
-          inputType={props.inputType}
-          id={props.id}
-          required
-          value={props.value}
-          onChange={props.onChange}
-        />
-      ) : (
-        <BookingFormSelect
-          id={props.id}
-          selectArray={props.selectArray}
-          className={styles["select-hide-option"]}
-        />
-      )}
+      {input}
       {props.isValid && <div className={`${styles["underline"]}`}></div>}
-      <label className={styles["input-label"]} htmlFor={props.id}>
-        {props.label}
+      <label className={styles["input-label"]} htmlFor={props.name}>
+        {props.label} <span className={styles.required}>*</span>
       </label>
     </div>
   );
