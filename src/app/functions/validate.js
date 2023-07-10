@@ -1,20 +1,24 @@
 const validateForm = (inputValues, setErrors) => {
   let errors = {};
-  if (inputValues.fullName.trim() === "") {
+  if (!inputValues.fullName.trim()) {
     errors.fullName = "Please enter a valid full name";
   }
 
-  if (inputValues.hotel.trim() === "") {
+  if (!inputValues.hotel.trim()) {
     errors.hotel = "Please select a hotel";
   }
 
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-  if (new Date(inputValues.checkInDate) < today) {
-    errors.checkInDate = "Please select a valid check-in date(not in the past)";
+  const selectedDate = new Date(inputValues.checkInDate);
+  selectedDate.setHours(0, 0, 0, 0);
+
+  if (selectedDate < today) {
+    errors.checkInDate = "The check-in date can not be in the past.";
   }
 
-  if (inputValues.checkInDate === "") {
+  if (!inputValues.checkInDate) {
     errors.checkInDate = "Please select the check-in date";
   }
 
@@ -22,7 +26,7 @@ const validateForm = (inputValues, setErrors) => {
     errors.numberOfGuests = "Please select a valid number of guests [1-3]";
   }
 
-  if (inputValues.numberOfGuests === null) {
+  if (!inputValues.numberOfGuests) {
     errors.numberOfGuests = "Please select the number of guests";
   }
   setErrors(errors);

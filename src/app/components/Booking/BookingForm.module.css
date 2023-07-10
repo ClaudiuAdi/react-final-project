@@ -1,3 +1,24 @@
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-title {
+  font-size: 30px;
+}
+
+.required {
+  color: #6c97a4;
+  font-size: 18px;
+}
+
+.form-subtitle {
+  font-style: italic;
+  color: #aaa;
+  margin-top: 5px;
+}
+
 .form {
   border-left: none;
   width: 100%;
@@ -18,7 +39,7 @@
 .form-inputs {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 60px;
 }
 
 /* varianta misto */
@@ -30,6 +51,7 @@
 
 .form-grouped-inputs {
   justify-content: space-between;
+  margin: 5px 0;
 }
 
 .form-inputs .field select {
@@ -43,6 +65,10 @@
 .form-input-booking-date input:focus ~ label,
 .form-input-booking-date input:valid ~ label {
   transform: none;
+}
+
+.form-input-booking-date input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 .form-grouped-inputs > .form-input-booking-date label {
@@ -64,6 +90,10 @@
   min-width: 40%;
 }
 
+.form-inputs .form-grouped-inputs .form-input-booking-date {
+  width: 160px;
+}
+
 /*  */
 
 .breakfast-input,
@@ -75,6 +105,7 @@
 .breakfast-input {
   display: flex;
   align-items: center;
+  margin-top: -10px;
 }
 
 .breakfast-input label {
@@ -94,6 +125,7 @@
   color: #1a1e23;
 }
 
+/* error handling */
 .invalid input,
 .invalid select {
   border-bottom: 2px solid #b00020;
@@ -116,6 +148,11 @@
 
 .invalid .underline:before {
   background: #b00020;
+}
+
+.error-container {
+  height: 8px;
+  margin-top: -10px;
 }
 
 .error-text {

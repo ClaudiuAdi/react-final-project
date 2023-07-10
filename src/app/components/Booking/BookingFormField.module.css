@@ -85,3 +85,9 @@
   /* var 2 */
   color: #b00020;
 }
+
+.error-text {
+  color: #b00020;
+  white-space: nowrap;
+  align-self: baseline;
+}
