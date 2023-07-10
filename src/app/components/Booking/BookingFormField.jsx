@@ -24,10 +24,13 @@ function BookingFormField(props) {
   return (
     <div className={`${props.className} ${styles.field}`}>
       {input}
-      {props.isValid && <div className={`${styles["underline"]}`}></div>}
+      {!props.isInvalid && <div className={`${styles["underline"]}`}></div>}
       <label className={styles["input-label"]} htmlFor={props.name}>
         {props.label} <span className={styles.required}>*</span>
       </label>
+      {props.isInvalid && (
+        <p className={styles["error-text"]}>{props.isInvalid}</p>
+      )}
     </div>
   );
 }

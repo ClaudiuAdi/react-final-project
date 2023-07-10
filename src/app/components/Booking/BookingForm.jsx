@@ -5,6 +5,8 @@ import { poppins } from "../../utils/fonts";
 import hotelsJson from "../../data/hotels.json";
 import BookingFormInput from "./BookingFormInput";
 import validateForm from "../../functions/validate";
+import totalPrice from "../../functions/calculateTotalPrice";
+import calculateCheckoutDate from "../../functions/calculateCheckoutDate";
 
 export const hotelsArray = hotelsJson.map((hotel) => hotel.name);
 const hotelNights = [3, 7, 10, 14, 30];
@@ -35,18 +37,27 @@ function BookingForm() {
     formIsValid = validateForm(inputFields, setErrors);
 
     if (formIsValid) {
+      const totalBookingPrice = totalPrice(inputFields);
+      const checkOut = calculateCheckoutDate(
+        inputFields.checkInDate,
+        parseInt(inputFields.numberOfNights)
+      );
       alert(
         inputFields.fullName +
           " " +
+          inputFields.hotel +
+          " " +
           inputFields.checkInDate +
+          " " +
+          checkOut +
           " " +
           inputFields.numberOfGuests +
           " " +
-          inputFields.hotel +
-          " " +
           inputFields.numberOfNights +
           " " +
-          inputFields.breakfast
+          inputFields.breakfast +
+          " " +
+          totalBookingPrice
       );
     }
   };
@@ -79,6 +90,13 @@ function BookingForm() {
       className={`${styles.form} ${poppins.className}`}
       onSubmit={handleSubmit}
     >
+      <div className={styles["titles"]}>
+        <h2 className={styles["form-title"]}>Booking Form</h2>
+        <p className={styles["form-subtitle"]}>
+          Fields marked with <span className={styles.required}>*</span> are
+          mandatory
+        </p>
+      </div>
       <div className={styles["form-inputs"]}>
         <BookingFormField
           inputType="text"
@@ -87,16 +105,16 @@ function BookingForm() {
           onChange={handleChange}
           value={inputFields.fullName}
           className={`${styles.field} ${errors.fullName && styles.invalid}`}
-          isValid={!errors.fullName}
+          isInvalid={errors.fullName}
         />
         <BookingFormField
           name="hotel"
-          label="Hotel"
+          label="Preferred hotel"
           selectArray={hotelsArray}
           onChange={handleChange}
           value={inputFields.hotel}
           className={`${styles.field} ${errors.hotel && styles.invalid}`}
-          isValid={!errors.hotel}
+          isInvalid={errors.hotel}
         />
         <div className={styles["form-grouped-inputs"]}>
           <BookingFormField
@@ -108,7 +126,7 @@ function BookingForm() {
             className={`${styles["form-input-booking-date"]} ${styles.field} ${
               errors.checkInDate && styles.invalid
             }`}
-            isValid={!errors.checkInDate}
+            isInvalid={errors.checkInDate}
           />
           <BookingFormField
             name="numberOfNights"
@@ -117,7 +135,7 @@ function BookingForm() {
             onChange={handleChange}
             value={inputFields.numberOfNights}
             className={styles["form-input-nights-number"] + " " + styles.field}
-            isValid
+            isInvalid={false}
           />
         </div>
         <BookingFormField
@@ -129,9 +147,8 @@ function BookingForm() {
           className={`${styles.field} ${
             errors.numberOfGuests && styles.invalid
           }`}
-          isValid={!errors.numberOfGuests}
+          isInvalid={errors.numberOfGuests}
         />
-
         <span className={styles["breakfast-input"]}>
           <label htmlFor="breakfast">Breakfast</label>
           <BookingFormInput
@@ -142,13 +159,24 @@ function BookingForm() {
           />
         </span>
       </div>
-
-      {Object.keys(errors).map((key) => (
-        <p key={key} className={styles["error-text"]}>
-          {errors[key]}
-        </p>
-      ))}
-
+      {/* <div className={styles["error-container"]}>
+        {Object.keys(errors).map((key) => (
+          <p key={key} className={styles["error-text"]}>
+            {errors[key]}
+          </p>
+        ))}
+      </div> */}
+      <div className={styles["error-container"]}>
+        {Object.keys(errors).length !== 0 && (
+          <p
+            className={`${styles["error-text"]} ${
+              Object.keys(errors).length ? styles.visibility : styles.hidden
+            }`}
+          >
+            Form is not valid. Please correct the errors and try again.
+          </p>
+        )}
+      </div>
       <button className={styles["button-submit"]}>SUBMIT</button>
     </form>
   );
