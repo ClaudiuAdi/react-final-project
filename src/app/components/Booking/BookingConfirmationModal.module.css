@@ -1,0 +1,105 @@
+.booking-confirmation-section {
+  width: 40%;
+  height: 70%;
+  background-color: #ebebed;
+  margin-top: 4%;
+  border: 2px solid #f8d8af;
+  color: #1a1e23;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 100px;
+  position: relative;
+}
+
+.hotel-image-container {
+  width: 100%;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.fullname {
+  text-align: center;
+  font-size: 50px;
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #1a1e23; */
+  /* border: 2px solid #f8d8af; */
+  /* border: 2px solid red; */
+  background-color: #2f3740;
+  color: #ebebed;
+  width: 120%;
+}
+
+.hotel {
+  background-color: #f8d8af;
+  color: #1a1e23;
+  text-align: center;
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+.booking-stay-information {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  padding-top: 20px;
+}
+
+.number-of-guests,
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 22px;
+}
+
+.table-details thead {
+  border-top: 2px solid #1a1e23;
+}
+
+.table-details th {
+  font-size: 22px;
+  /* border: 2px solid red; */
+  text-align: center;
+  white-space: nowrap;
+  padding: 20px 10px;
+}
+
+.table-details td {
+  text-align: center;
+  padding: 20px 0px;
+  background-color: #1a1e23;
+  font-size: 20px;
+}
+
+.booking-confirmation-section h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.total-price {
+  font-size: 40px;
+  align-self: flex-start;
+  margin-top: -20px;
+  color: #1a1e23;
+  margin-left: -30px;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #1a1e23;
+  color: #f8d8af;
+  padding: 18px 20px;
+  font-size: 20px;
+}
