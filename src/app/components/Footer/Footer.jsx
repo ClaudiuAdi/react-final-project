@@ -5,6 +5,7 @@ import FooterSocials from "./FooterSocials";
 import FooterMenu from "./FooterMenu";
 import FooterContactDetails from "./FooterContactDetails";
 
+const year = new Date().getFullYear();
 function Footer() {
   return (
     <footer className={styles["footer-section"]}>
@@ -15,7 +16,9 @@ function Footer() {
           <FooterSocials className={styles["footer-socials"]} />
         </div>
         <FooterMenu className={styles["footer-menu-container"]} />
-        <div className={styles["footer-copyright"]}>All rights reserved © </div>
+        <div className={styles["footer-copyright"]}>
+          All rights reserved © {year}
+        </div>
       </div>
     </footer>
   );

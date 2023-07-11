@@ -12,6 +12,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import WelcomeImage from "./components/WelcomeImage";
 import { BookingContextProvider } from "./store/form-context";
+import { useRef } from "react";
 
 export default function Home() {
   return (

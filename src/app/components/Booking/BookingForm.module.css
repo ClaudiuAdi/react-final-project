@@ -123,6 +123,12 @@
   background-color: #1a1e23;
   background-color: #f8d8af;
   color: #1a1e23;
+  transition: 0.3s all;
+}
+
+.button-submit:hover {
+  background-color: #ebebed;
+  color: #1a1e23;
 }
 
 /* error handling */

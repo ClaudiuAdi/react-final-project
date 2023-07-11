@@ -29,7 +29,11 @@ function Testimonials() {
 
   return (
     <>
-      <SectionTitle title={"TESTIMONIALS"} axis={"horizontal"} />
+      <SectionTitle
+        title={"TESTIMONIALS"}
+        axis={"horizontal"}
+        id="testimonials"
+      />
       <section className={styles["testimonials-section"]}>
         <button className={styles["left-button"]} onClick={prevTestimonial}>
           <Icon
