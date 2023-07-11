@@ -11,10 +11,11 @@ import Booking from "./components/Booking/Booking";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import WelcomeImage from "./components/WelcomeImage";
+import { BookingContextProvider } from "./store/form-context";
 
 export default function Home() {
   return (
-    <>
+    <BookingContextProvider>
       <div className={styles.container + " " + prata.className}>
         <Header className={styles.header} />
         <WelcomeImage className={styles["welcoming-image"]} />
@@ -26,6 +27,6 @@ export default function Home() {
       <Testimonials />
       <Booking />
       <Footer />
-    </>
+    </BookingContextProvider>
   );
 }

@@ -30,8 +30,6 @@ const validateForm = (inputValues, setErrors) => {
     errors.numberOfGuests = "Please select the number of guests";
   }
   setErrors(errors);
-
-  return Object.keys(errors).length === 0;
 };
 
 export default validateForm;
