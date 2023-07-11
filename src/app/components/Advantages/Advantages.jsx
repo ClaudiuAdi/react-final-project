@@ -10,7 +10,7 @@ function Advantages() {
   const icons = [Lightning, Money, Medal, Users];
 
   return (
-    <section className={styles["advantages-section"]}>
+    <section className={styles["advantages-section"]} id="advantages">
       <div className={styles["advantages-container"]}>
         <div className={styles["advantages-image-overlay"]}>
           <h2 className={styles["advantages-title"] + " " + prata.className}>

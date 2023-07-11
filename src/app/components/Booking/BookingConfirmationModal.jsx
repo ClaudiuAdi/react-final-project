@@ -40,7 +40,7 @@ function BookingConfirmationModal(props) {
         />
       </div> */}
       <h2 className={`${styles["fullname"]} ${prata.className}`}>
-        {props.info.fullName}'s booking
+        {props.info.fullName}&apos;s booking
       </h2>
       <div className={styles["booking-details"]}>
         <p className={styles.hotel}>{props.info.hotel}</p>

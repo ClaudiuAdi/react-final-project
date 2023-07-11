@@ -11,6 +11,17 @@
   align-items: center;
   padding: 20px 100px;
   position: relative;
+  animation: 0.7s ease-out slideDown;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .hotel-image-container {

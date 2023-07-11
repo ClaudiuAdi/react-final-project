@@ -4,7 +4,7 @@ import { poppins } from "../utils/fonts";
 
 function SectionTitle(props) {
   return (
-    <div className={styles["section-title-container"]}>
+    <div className={styles["section-title-container"]} id={props.id}>
       <div className={styles["title-section"] + " " + styles[props.axis]}>
         <span className={styles.bar + " " + styles["first-bar"]}></span>
         <span className={styles["title-bar"] + " " + poppins.className}>

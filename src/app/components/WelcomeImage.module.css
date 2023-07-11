@@ -25,3 +25,9 @@
   right: 14%;
   font-weight: 500;
 }
+
+.book-now-button:hover {
+  background-color: #fff;
+  color: #1a1e23;
+  transition: 0.3s all;
+}

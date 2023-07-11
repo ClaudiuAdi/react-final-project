@@ -1,16 +1,14 @@
 import React from "react";
 import styles from "./Hotels.module.css";
 import hotelsJson from "../../data/hotels.json";
-import { prata, haviland } from "../../utils/fonts";
+import { prata } from "../../utils/fonts";
 import SectionTitle from "../SectionTitle";
 import HotelCard from "./HotelCard";
 
-function Hotels() {
-  // const hotelsArray = JSON.parse(JSON.stringify(hotelsJson));
-
+const Hotels = () => {
   return (
     <>
-      <SectionTitle title={"OUR HOTELS"} axis={"horizontal"} />
+      <SectionTitle title={"OUR HOTELS"} axis={"horizontal"} id="hotels" />
       <section className={styles["hotel-section"]}>
         <p className={styles["hotel-section-title"] + " " + prata.className}>
           Your paradise Retreat
@@ -23,6 +21,6 @@ function Hotels() {
       </section>
     </>
   );
-}
+};
 
 export default Hotels;

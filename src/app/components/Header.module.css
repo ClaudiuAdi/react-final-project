@@ -1,6 +1,6 @@
 .container {
   /* background-color: red; */
-  height: 7rem;
+  height: 6rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -10,6 +10,11 @@
   background-color: #fff;
   background-color: #2f3740;
   /* border-bottom: 2px solid #ebebed; */
+  /* position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9; */
 }
 
 .logo {
@@ -31,4 +36,10 @@
   color: #2f3740;
   color: #fff;
   font-size: 16px;
+}
+
+.link:hover {
+  color: #f8d8af;
+  transition: 0.3s all;
+  cursor: pointer;
 }
