@@ -12,6 +12,7 @@
   background-color: #2f3740;
   color: #fff;
   color: #f8d8af;
+  /* border-top: 2px solid #f8d8af; */
 }
 
 .engage-title {
@@ -26,7 +27,8 @@
   align-items: center;
 
   /* var 2 */
-  border-top: 2px solid #f8d8af;
+  /* border-top: 2px solid #f8d8af; */
+  /* background-color: red; */
 }
 
 .engage-description {
@@ -57,6 +59,8 @@
   /* var 2 */
   background-color: #2f3740;
   border-top: 2px solid #f8d8af;
+  /* background-color: red; */
+  margin-bottom: -100px;
 }
 
 .engage-more-text-container {

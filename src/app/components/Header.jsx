@@ -1,12 +1,43 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Header.module.css";
 import { poppins } from "../utils/fonts";
 
 function Header() {
+  const [fix, setFix] = useState(false);
+
+  const setFixed = () => {
+    if (window.scrollY > 860) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  };
+
+  window.addEventListener("scroll", setFixed);
+
+  const hotelLinkRef = useRef();
+  const advantagesRef = useRef();
+  const testimonialsRef = useRef();
+  const bookingRef = useRef();
+  const topRef = useRef();
+
+  const hotelLinkClickHandler = (e) => handleClick(e, hotelLinkRef);
+  const advantagesLinkClickHandler = (e) => handleClick(e, advantagesRef);
+  const testimonialsLinkClickHandler = (e) => handleClick(e, testimonialsRef);
+  const bookingLinkClickHandler = (e) => handleClick(e, bookingRef);
+  const topLinkClickHandler = (e) => handleClick(e, topRef);
+
   const handleClick = (e, ref) => {
     e.preventDefault();
 
     const href = ref.current.getAttribute("href");
+
+    // Scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
 
     // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
@@ -15,44 +46,56 @@ function Header() {
     }
   };
 
-  const hotelLinkRef = useRef();
-  const advantagesRef = useRef();
-  const testimonialsRef = useRef();
-
-  const hotelLinkClickHandler = (e) => handleClick(e, hotelLinkRef);
-  const advantagesLinkClickHandler = (e) => handleClick(e, advantagesRef);
-  const testimonialsLinkClickHandler = (e) => handleClick(e, testimonialsRef);
-
   return (
-    <header className={styles.container}>
-      <span className={styles["logo"]}>logo</span>
-      <div className={styles.menu}>
-        <a
-          className={styles["link"] + " " + poppins.className}
-          href="#hotels"
-          ref={hotelLinkRef}
-          onClick={hotelLinkClickHandler}
+    <header
+      className={`${styles.container} ${poppins.className} ${
+        fix && styles.fixed
+      }`}
+    >
+      <div>
+        <span
+          className={styles["logo"]}
+          href="#"
+          ref={topRef}
+          onClick={topLinkClickHandler}
         >
-          Our Hotels
-        </a>
-        <a
-          className={styles["link"] + " " + poppins.className}
-          href="#advantages"
-          ref={advantagesRef}
-          onClick={advantagesLinkClickHandler}
-        >
-          Why book with us
-        </a>
-        <a
-          className={styles["link"] + " " + poppins.className}
-          href="#testimonials"
-          ref={testimonialsRef}
-          onClick={testimonialsLinkClickHandler}
-        >
-          Testimonials
-        </a>
+          logo
+        </span>
+        <div className={styles.menu}>
+          <a
+            className={styles["link"]}
+            href="#hotels"
+            ref={hotelLinkRef}
+            onClick={hotelLinkClickHandler}
+          >
+            Our Hotels
+          </a>
+          <a
+            className={styles["link"]}
+            href="#advantages"
+            ref={advantagesRef}
+            onClick={advantagesLinkClickHandler}
+          >
+            Why book with us
+          </a>
+          <a
+            className={styles["link"]}
+            href="#testimonials"
+            ref={testimonialsRef}
+            onClick={testimonialsLinkClickHandler}
+          >
+            Testimonials
+          </a>
+          <a
+            href="#booking"
+            ref={bookingRef}
+            onClick={bookingLinkClickHandler}
+            className={`${styles["link"]} ${styles["book-link"]}`}
+          >
+            Book now
+          </a>
+        </div>
       </div>
-      {/* <a href="">Book now</a> */}
     </header>
   );
 }
