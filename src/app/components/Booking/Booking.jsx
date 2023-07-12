@@ -7,7 +7,7 @@ import BookingForm from "./BookingForm";
 function Booking() {
   return (
     <>
-      <section className={styles["booking-form-section"]}>
+      <section className={styles["booking-form-section"]} id="booking">
         <span className={styles["section-title-tag"] + " " + poppins.className}>
           BOOK NOW
         </span>

@@ -1,0 +1,132 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 75px;
+  gap: 45px;
+  height: 100vh;
+  grid-column: 1;
+  grid-row: 2;
+
+  /* var 2 */
+  background-color: #2f3740;
+  color: #f8d8af;
+  /* background-color: red; */
+  border-bottom: 2px solid #f8d8af;
+}
+
+.hero-container {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image-overlay {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  gap: 50px;
+
+  /* var 2 */
+  background: linear-gradient(to right, #2f3740, 60%, transparent);
+  /* background: linear-gradient(to top, #f8d8af, 0.1%, transparent),
+    linear-gradient(to right, #2f3740, 40%, transparent); */
+  color: #1a1e23;
+  position: relative;
+}
+
+.hero-image-overlay h1 {
+  font-size: 100px;
+  color: #f8d8af;
+}
+
+.encouraging-text {
+  font-size: 30px;
+  color: #52514e;
+  text-align: left;
+  font-weight: 500;
+
+  /* var 2 */
+  color: #f8d8af;
+  color: #ebebed;
+}
+
+.welcome-buttons {
+  font-size: 16px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-content: flex-start;
+}
+
+.booking-button {
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  /* var 2 */
+  border: 2px solid #f8d8af;
+  background-color: #f8d8af;
+  color: #1a1e23;
+  transition: 0.3s all;
+}
+
+.booking-button:hover {
+  background-color: #c6af8e;
+  border-color: #c6af8e;
+}
+
+.learn-more-button {
+  border: 2px solid #fff;
+  background-color: #fff;
+  padding: 20px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  /* var 2 */
+  color: #1a1e23;
+  transition: 0.3s all;
+}
+
+.learn-more-button:hover {
+  background-color: transparent;
+  color: #ebebed;
+}
+
+.hero-images {
+  display: flex;
+  position: absolute;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-image-naviagtion {
+  color: #fff;
+}
+
+.hero-hotel-location {
+  /* background-color: red; */
+  display: flex;
+  position: absolute;
+  bottom: 7%;
+  font-size: 16px;
+  color: #f8d8af;
+  color: #fff;
+  color: #ebebed;
+  gap: 10px;
+  align-items: center;
+}
+
+.hero-hotel-location-icon {
+  font-size: 24px;
+}
