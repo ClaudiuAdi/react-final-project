@@ -9,17 +9,46 @@ import Booking from "./components/Booking/Booking";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import { BookingContextProvider } from "./store/form-context";
+import styles from "./page.module.css";
+import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 export default function Home() {
+  const [headerRef, isHeaderIntercepting] = useIntersectionObserver();
+  const [heroRef, isHeroIntercepting] = useIntersectionObserver();
+  const [engageRef, isEngageIntercepting] = useIntersectionObserver();
+  const [hotelsRef, isHotelsIntercepting] = useIntersectionObserver();
+  const [advantagesRef, isAdvantagesIntercepting] = useIntersectionObserver();
+  const [testimonialsRef, isTestimonialsIntercepting] =
+    useIntersectionObserver();
+  const [bookingRef, isBookingIntercepting] = useIntersectionObserver();
+
   return (
     <BookingContextProvider>
-      <Header />
-      <Hero />
-      <Engage />
-      <Hotels />
-      <Advantages />
-      <Testimonials />
-      <Booking />
+      <Header
+        ref={headerRef}
+        className={isHeaderIntercepting ? styles.anim : ""}
+      />
+      <Hero ref={heroRef} className={isHeroIntercepting ? styles.anim : ""} />
+      <Engage
+        ref={engageRef}
+        className={isEngageIntercepting ? styles.anim : ""}
+      />
+      <Hotels
+        ref={hotelsRef}
+        className={isHotelsIntercepting ? styles.anim : ""}
+      />
+      <Advantages
+        ref={advantagesRef}
+        className={isAdvantagesIntercepting ? styles.anim : ""}
+      />
+      <Testimonials
+        ref={testimonialsRef}
+        className={isTestimonialsIntercepting ? styles.anim : ""}
+      />
+      <Booking
+        ref={bookingRef}
+        className={isBookingIntercepting ? styles.anim : ""}
+      />
       <Footer />
     </BookingContextProvider>
   );

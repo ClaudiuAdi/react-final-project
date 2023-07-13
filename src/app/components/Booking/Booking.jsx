@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { forwardRef, useContext } from "react";
 import styles from "./Booking.module.css";
 import reception_image from "../../resources/reception2.jpg";
 import { poppins, prata } from "../../utils/fonts";
 import BookingForm from "./BookingForm";
 
-function Booking() {
+const Booking = forwardRef(function (props, ref) {
   return (
     <>
       <section className={styles["booking-form-section"]} id="booking">
@@ -20,7 +20,7 @@ function Booking() {
           <br />
           Your Aspirations Come True
         </h2>
-        <div className={styles["form-card"]}>
+        <div className={styles["form-card"] + " " + props.className} ref={ref}>
           <img
             src={reception_image.src}
             alt="reception image"
@@ -31,6 +31,6 @@ function Booking() {
       </section>
     </>
   );
-}
+});
 
 export default Booking;

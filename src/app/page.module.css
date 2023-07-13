@@ -1,0 +1,17 @@
+.anim {
+  animation: 1.2s ease-out slideUp;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    filter: blur(3px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}

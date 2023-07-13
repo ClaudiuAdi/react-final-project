@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import styles from "./Hero.module.css";
 import { poppins, prata } from "../utils/fonts";
 import heroHotels from "../data/heroImages.json";
@@ -11,7 +11,7 @@ import {
   Rectangle,
 } from "@phosphor-icons/react";
 
-function Welcome() {
+const Welcome = forwardRef(function (props, ref) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const imageClass = {
@@ -37,23 +37,29 @@ function Welcome() {
     <>
       <section className={styles["hero-section"] + " " + prata.className}>
         <div className={`${styles["hero-container"]}`} style={imageClass}>
-          <div className={styles["hero-image-overlay"]}>
-            <h1>
+          <div className={styles["hero-image-overlay"]} ref={ref}>
+            <h1 className={props.className}>
               Hotels for moments
               <br />
               in emotions
             </h1>
-            <h2 className={styles["encouraging-text"]}>
+            <h2 className={styles["encouraging-text"] + " " + props.className}>
               Book now and get the best prices
             </h2>
             <div
               className={styles["welcome-buttons"] + " " + poppins.className}
             >
-              <button className={styles["booking-button"]}>BOOK NOW</button>
-              <button className={styles["learn-more-button"]}>
+              <button
+                className={styles["booking-button"] + " " + props.className}
+              >
+                BOOK NOW
+              </button>
+              <button
+                className={styles["learn-more-button"] + " " + props.className}
+              >
                 LEARN MORE
               </button>
-              <div className={styles["hero-images"]}>
+              <div className={styles["hero-images"] + " " + props.className}>
                 {heroHotels.map((_, index) => (
                   <button
                     key={index}
@@ -70,7 +76,11 @@ function Welcome() {
                 ))}
               </div>
 
-              <div className={styles["hero-hotel-location"]}>
+              <div
+                className={
+                  styles["hero-hotel-location"] + " " + props.className
+                }
+              >
                 <Icon
                   icon={MapPin}
                   weight="light"
@@ -84,6 +94,6 @@ function Welcome() {
       </section>
     </>
   );
-}
+});
 
 export default Welcome;

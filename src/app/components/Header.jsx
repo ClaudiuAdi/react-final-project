@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 import styles from "./Header.module.css";
 import { poppins } from "../utils/fonts";
 
-function Header() {
+const Header = forwardRef(function (props, ref) {
   const [fix, setFix] = useState(false);
 
   const setFixed = () => {
@@ -52,7 +52,7 @@ function Header() {
         fix && styles.fixed
       }`}
     >
-      <div>
+      <div ref={ref} className={props.className}>
         <span
           className={styles["logo"]}
           href="#"
@@ -98,6 +98,6 @@ function Header() {
       </div>
     </header>
   );
-}
+});
 
 export default Header;
