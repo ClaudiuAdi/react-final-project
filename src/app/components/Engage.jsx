@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "./Engage.module.css";
 import { prata, poppins } from "../utils/fonts";
 import Image from "next/image";
 import sandals_royal from "../resources/royal-engage-image.jpg";
 
-function Engage() {
+const Engage = forwardRef(function (props, ref) {
   return (
-    <section className={styles["engage-section"]}>
+    <section className={styles["engage-section"]} id={props.id} ref={ref}>
       <h2 className={prata.className + " " + styles["engage-title"]}>
         Here, our hotels become your paradise.
       </h2>
@@ -16,7 +16,11 @@ function Engage() {
         journey with utmost precision and moments of grandeur.
       </div>
       <div className={styles["engage-more"]}>
-        <Image className={styles.image} src={sandals_royal} alt="" />
+        <Image
+          className={styles.image + " " + props.className}
+          src={sandals_royal}
+          alt=""
+        />
         <div className={styles["engage-more-text-container"]}>
           <p className={prata.className + " " + styles["engage-more-text"]}>
             With Chess Travels you embark on a transformative journey of refined
@@ -31,6 +35,6 @@ function Engage() {
       </div>
     </section>
   );
-}
+});
 
 export default Engage;

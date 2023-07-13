@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import styles from "./Testimonials.module.css";
 import quotations_image from "../../resources/download.svg";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
@@ -7,7 +7,7 @@ import SectionTitle from "../SectionTitle";
 import Testimonial from "./Testimonial";
 import testimonialsData from "../../data/testimonials.json";
 
-function Testimonials() {
+const Testimonials = forwardRef(function (props, ref) {
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +34,7 @@ function Testimonials() {
         axis={"horizontal"}
         id="testimonials"
       />
-      <section className={styles["testimonials-section"]}>
+      <section className={styles["testimonials-section"]} ref={ref}>
         <button className={styles["left-button"]} onClick={prevTestimonial}>
           <Icon
             icon={ArrowLeft}
@@ -44,7 +44,7 @@ function Testimonials() {
         </button>
         {testimonials.length > 0 && (
           <Testimonial
-            className={styles["testimonial"]}
+            className={styles["testimonial"] + " " + props.className}
             testimonial={testimonials.at(currentIndex)}
           />
         )}
@@ -58,6 +58,5 @@ function Testimonials() {
       </section>
     </>
   );
-}
-
+});
 export default Testimonials;
