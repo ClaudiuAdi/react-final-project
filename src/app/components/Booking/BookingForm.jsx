@@ -5,7 +5,7 @@ import { poppins } from "../../utils/fonts";
 import hotelsJson from "../../data/hotels.json";
 import BookingFormInput from "./BookingFormInput";
 import validateForm from "../../functions/validate";
-import { BookingContext } from "../../store/form-context";
+import { ModalContext } from "../../store/modal-context";
 import Modal from "../Modal";
 import BookingConfirmationModal from "./BookingConfirmationModal";
 import BookingErrorModal from "./BookingErrorModal";
@@ -23,7 +23,7 @@ function BookingForm() {
     breakfast: false,
   });
   const [errors, setErrors] = useState({});
-  const { openModal, setOpenModal, blockScroll } = useContext(BookingContext);
+  const { openModal, setOpenModal, blockScroll } = useContext(ModalContext);
 
   const handleChange = (e) => {
     setInputFields({ ...inputFields, [e.target.name]: e.target.value });
@@ -41,6 +41,7 @@ function BookingForm() {
     blockScroll();
   };
 
+  // custom style for the modal
   const overlayModalStyles = {
     justifyContent: "center",
   };
@@ -66,7 +67,9 @@ function BookingForm() {
             label="Full Name"
             onChange={handleChange}
             value={inputFields.fullName}
-            className={`${styles.field} ${errors.fullName && styles.invalid}`}
+            className={`${styles["form-input-field"]} ${
+              errors.fullName && styles.invalid
+            }`}
             isInvalid={errors.fullName}
           />
           <BookingFormField
@@ -75,7 +78,9 @@ function BookingForm() {
             selectArray={hotelsArray}
             onChange={handleChange}
             value={inputFields.hotel}
-            className={`${styles.field} ${errors.hotel && styles.invalid}`}
+            className={`${styles["form-input-field"]} ${
+              errors.hotel && styles.invalid
+            }`}
             isInvalid={errors.hotel}
           />
           <div className={styles["form-grouped-inputs"]}>
@@ -86,7 +91,7 @@ function BookingForm() {
               onChange={handleChange}
               value={inputFields.checkInDate}
               className={`${styles["form-input-booking-date"]} ${
-                styles.field
+                styles["form-input-field"]
               } ${errors.checkInDate && styles.invalid}`}
               isInvalid={errors.checkInDate}
             />
@@ -96,9 +101,7 @@ function BookingForm() {
               selectArray={hotelNights}
               onChange={handleChange}
               value={inputFields.numberOfNights}
-              className={
-                styles["form-input-nights-number"] + " " + styles.field
-              }
+              className={`${styles["form-input-nights-number"]} ${styles["form-input-field"]}`}
               isInvalid={false}
             />
           </div>
@@ -108,7 +111,7 @@ function BookingForm() {
             label="Number of guests"
             value={inputFields.numberOfGuests}
             onChange={handleChange}
-            className={`${styles.field} ${
+            className={`${styles["form-input-field"]} ${
               errors.numberOfGuests && styles.invalid
             }`}
             isInvalid={errors.numberOfGuests}

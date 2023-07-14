@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.css";
-import { BookingContext } from "../store/form-context";
+import { BookingContext, ModalContext } from "../store/modal-context";
 import resetForm from "../functions/reset";
 
 function Modal({
@@ -11,7 +11,7 @@ function Modal({
   setInputFields = () => {},
   info = {},
 }) {
-  const { setOpenModal, allowScroll } = useContext(BookingContext);
+  const { setOpenModal, allowScroll } = useContext(ModalContext);
   const modalRef = useRef();
   const closeModal = (e) => {
     if (modalRef.current === e.target) {

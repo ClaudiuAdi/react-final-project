@@ -1,9 +1,6 @@
 .footer-section {
-  background-image: url("../../resources/footer-image.jpg");
-  background-size: cover;
-  background-position: center;
   width: 100%;
-  height: 550px;
+  height: 34.375rem;
   font-weight: 300;
 }
 
@@ -29,16 +26,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  padding-bottom: 50px;
+  gap: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 
 .footer-contact-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  font-size: 20px;
+  gap: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .footer-contact-details > a,
@@ -61,8 +58,8 @@
 
 .footer-socials {
   display: flex;
-  gap: 20px;
-  font-size: 30px;
+  gap: 1.25rem;
+  font-size: 1.875rem;
 }
 
 .footer-menu-container {
@@ -70,11 +67,12 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-  gap: 30px;
+  gap: 1.875rem;
   justify-content: center;
 }
 
 .footer-copyright {
   position: absolute;
-  bottom: 28px;
+  bottom: 1.75rem;
+  font-size: 0.875rem;
 }

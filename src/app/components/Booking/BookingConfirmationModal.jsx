@@ -6,10 +6,10 @@ import calculateCheckoutDate from "../../functions/calculateCheckoutDate";
 import totalPrice from "../../functions/calculateTotalPrice";
 import { poppins, prata } from "../../utils/fonts";
 import resetForm from "../../functions/reset";
-import { BookingContext } from "../../store/form-context";
+import { ModalContext } from "../../store/modal-context";
 
 function BookingConfirmationModal(props) {
-  const { setOpenModal, allowScroll } = useContext(BookingContext);
+  const { setOpenModal, allowScroll } = useContext(ModalContext);
 
   const hotel = hotelsJson.find((hotel) => hotel.name === props.info.hotel);
 

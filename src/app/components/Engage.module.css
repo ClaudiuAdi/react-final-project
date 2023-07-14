@@ -10,9 +10,7 @@
 
   /* var 2 */
   background-color: #2f3740;
-  color: #fff;
   color: #f8d8af;
-  /* border-top: 2px solid #f8d8af; */
 }
 
 .engage-title {
@@ -20,15 +18,11 @@
   grid-row: 1;
   text-align: left;
   align-self: center;
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 2.25rem;
+  line-height: 1.2;
   height: 100%;
   display: flex;
   align-items: center;
-
-  /* var 2 */
-  /* border-top: 2px solid #f8d8af; */
-  /* background-color: red; */
 }
 
 .engage-description {
@@ -36,14 +30,13 @@
   grid-row: 1;
   text-align: right;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.125rem;
   align-self: center;
-  padding: 70px 140px;
+  padding: 5rem 8.75rem;
   padding-left: 20%;
-  line-height: 30px;
+  line-height: 1.6;
 
-  /* var 2 */
-  border-left: 2px solid #f8d8af;
+  border-left: 0.125rem solid #f8d8af;
   color: #fff;
 }
 
@@ -54,36 +47,36 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 3.75rem;
 
   /* var 2 */
   background-color: #2f3740;
-  border-top: 2px solid #f8d8af;
+  border-top: 0.125rem solid #f8d8af;
   /* background-color: red; */
-  margin-bottom: -100px;
+  margin-bottom: -6.25rem;
 }
 
 .engage-more-text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .engage-more-text {
-  font-size: 45px;
-  margin: 0 200px;
+  font-size: 2.25rem;
+  margin: 0 12.5rem;
   text-align: center;
-  line-height: 60px;
+  line-height: 1.6;
 
   /* var  2 */
   color: #fff;
 }
 
 .engage-button {
-  padding: 20px 40px;
-  font-size: 16px;
-  letter-spacing: 2px;
+  padding: 1.125rem 2.375rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.094rem;
 
   /* var 2 */
   background-color: #f8d8af;
@@ -100,4 +93,44 @@
   width: 85%;
   height: 50%;
   object-fit: cover;
+}
+
+@media (max-width: 93.125rem) {
+  .engage-description {
+    padding-left: 12%;
+    padding-right: 15%;
+  }
+}
+
+@media (max-width: 81.25rem) {
+  .engage-more-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .engage-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .engage-title {
+    padding: 2.5rem 8.75rem;
+    text-align: center;
+  }
+
+  .engage-description {
+    border-left: none;
+    border-top: 0.125rem solid #f8d8af;
+    text-align: left;
+  }
+
+  .engage-more-text {
+    margin: 0;
+  }
+
+  .engage-more {
+    padding-top: 4.375rem;
+    padding-bottom: 2.5rem;
+  }
 }
