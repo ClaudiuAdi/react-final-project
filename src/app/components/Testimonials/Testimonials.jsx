@@ -36,9 +36,9 @@ const Testimonials = forwardRef(function (props, ref) {
       />
       <section className={styles["testimonials-section"]} ref={ref}>
         <p
-          className={
-            styles["testimonials-section-subtitle"] + " " + prata.className
-          }
+          className={`
+            ${styles["testimonials-section-subtitle"]} ${prata.className}
+          `}
         >
           Luxurious Retreats, Rave Reviews
         </p>
@@ -52,7 +52,7 @@ const Testimonials = forwardRef(function (props, ref) {
           </button>
           {testimonials.length > 0 && (
             <Testimonial
-              className={styles["testimonial"] + " " + props.className}
+              className={`${styles["testimonial"]} ${props.className}`}
               testimonial={testimonials.at(currentIndex)}
             />
           )}

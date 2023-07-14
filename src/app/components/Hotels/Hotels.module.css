@@ -13,8 +13,6 @@
   padding-left: 15%;
   font-size: 3.875rem;
   padding-bottom: 2.813rem;
-
-  /* var 2 */
   color: #fff;
   width: 100%;
 }
@@ -23,7 +21,6 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 1fr 1fr;
-  /* background-color: red; */
   gap: 3.125rem;
   width: 85%;
 }

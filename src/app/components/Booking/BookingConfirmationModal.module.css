@@ -14,16 +14,6 @@
   animation: 0.7s ease-out slideDown;
 }
 
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .hotel-image-container {
   width: 100%;
   height: auto;
@@ -42,9 +32,6 @@
 .booking-details {
   display: flex;
   flex-direction: column;
-  /* background-color: #1a1e23; */
-  /* border: 0.125rem solid #f8d8af; */
-  /* border: 0.125rem solid red; */
   background-color: #2f3740;
   color: #ebebed;
   width: 120%;
@@ -79,7 +66,6 @@
 
 .table-details th {
   font-size: 1rem;
-  /* border: 0.125rem solid red; */
   text-align: center;
   white-space: nowrap;
   padding: 1.25rem 0.625rem;
@@ -113,6 +99,16 @@
   color: #f8d8af;
   padding: 1.125rem 1.25rem;
   font-size: 1.25rem;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 67.25rem) {

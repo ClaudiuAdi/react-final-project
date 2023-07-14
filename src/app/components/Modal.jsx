@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.css";
-import { BookingContext, ModalContext } from "../store/modal-context";
+import { ModalContext } from "../store/modal-context";
 import resetForm from "../functions/reset";
 
 function Modal({

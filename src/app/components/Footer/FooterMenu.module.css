@@ -1,12 +1,6 @@
 .footer-bar {
   width: 100%;
-  background-color: #dad5c2;
   height: 0.063rem;
-
-  /* var 2 */
-  background-color: #1a1e23;
-  background-color: #f8d8af;
-  background-color: #fff;
   background-color: #ebebed;
 }
 
@@ -19,12 +13,6 @@
 
 .footer-menu > a {
   text-decoration: none;
-  color: #fff;
-
-  /* var 2 */
-  color: #1a1e23;
-  color: #f8d8af;
-  color: #fff;
   color: #ebebed;
   font-size: 0.875rem;
 }

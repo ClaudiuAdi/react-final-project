@@ -11,14 +11,10 @@
   height: 0.625rem;
   align-items: center;
   gap: 1.875rem;
-  color: #487254;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.094rem;
   white-space: nowrap;
-
-  /* var 2 */
-  color: #ebebed;
   color: #f8d8af;
 }
 
@@ -32,10 +28,7 @@
 
 .bar {
   height: 0.125rem;
-  background-color: #dad5c2;
   display: block;
-
-  /* var 2 */
   background-color: #f8d8af;
 }
 

@@ -10,7 +10,7 @@ const year = new Date().getFullYear();
 function Footer() {
   return (
     <footer className={styles["footer-section"]}>
-      <div className={styles["footer-image-overlay"] + " " + poppins.className}>
+      <div className={`${styles["footer-image-overlay"]} ${poppins.className}`}>
         <div className={styles["footer-contact"]}>
           <Logo className={styles["footer-logo"]} />
           <FooterContactDetails className={styles["footer-contact-details"]} />

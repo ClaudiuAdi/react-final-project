@@ -14,24 +14,12 @@ const Advantages = forwardRef(function (props, ref) {
       <div className={styles["advantages-container"]}>
         <div className={styles["advantages-image-overlay"]} ref={ref}>
           <h2
-            className={
-              styles["advantages-title"] +
-              " " +
-              prata.className +
-              " " +
-              props.className
-            }
+            className={`${styles["advantages-title"]} ${prata.className} ${props.className}`}
           >
             Why book with us
           </h2>
           <div
-            className={
-              styles.advantages +
-              " " +
-              poppins.className +
-              " " +
-              props.className
-            }
+            className={`${styles.advantages} ${poppins.className} ${props.className}`}
           >
             {advantagesArray.map((advantage, index) => (
               <AdvantageCard
