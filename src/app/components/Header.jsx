@@ -56,14 +56,12 @@ const Header = forwardRef(function (props, ref) {
 
     const href = ref.current.getAttribute("href");
 
-    // Scroll back to top
     if (href === "#")
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
 
-    // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });

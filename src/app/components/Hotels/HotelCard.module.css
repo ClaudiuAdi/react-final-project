@@ -81,17 +81,10 @@
 }
 
 .hotel-extra-info-rating {
-  background-color: #2f3740;
-  color: #f6f3e9;
   padding: 0.625rem 0.938rem;
   width: fit-content;
   position: absolute;
-  /* right: 2.8rem; */
-  /* bottom: 1.2rem; */
-  /* var 2: bottom: 1.4rem; */
   font-size: 1.4rem;
-
-  /* var 2 */
   background-color: #1a1e23;
   color: #f8d8af;
   right: 3rem;

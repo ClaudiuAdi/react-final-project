@@ -9,12 +9,12 @@ function HotelCard(props) {
       <div className={styles["hotel-image-container"]}>
         <img
           src={props.hotel.featured_image}
-          alt=""
+          alt="Hotel Image"
           className={styles["hotel-image"]}
         />
       </div>
-      <div className={styles["hotel-information"] + " " + poppins.className}>
-        <p className={styles["hotel-title"] + " " + prata.className}>
+      <div className={`${styles["hotel-information"]} ${poppins.className}`}>
+        <p className={`${styles["hotel-title"]} ${prata.className}`}>
           {props.hotel.name}
         </p>
         <p className={styles["hotel-price"]}>

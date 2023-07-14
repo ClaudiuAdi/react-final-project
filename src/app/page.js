@@ -26,28 +26,31 @@ export default function Home() {
     <ModalContextProvider>
       <Header
         ref={headerRef}
-        className={isHeaderIntercepting ? styles.anim : ""}
+        className={isHeaderIntercepting ? styles["animate-scroll"] : ""}
       />
-      <Hero ref={heroRef} className={isHeroIntercepting ? styles.anim : ""} />
+      <Hero
+        ref={heroRef}
+        className={isHeroIntercepting ? styles["animate-scroll"] : ""}
+      />
       <Engage
         ref={engageRef}
-        className={isEngageIntercepting ? styles.anim : ""}
+        className={isEngageIntercepting ? styles["animate-scroll"] : ""}
       />
       <Hotels
         ref={hotelsRef}
-        className={isHotelsIntercepting ? styles.anim : ""}
+        className={isHotelsIntercepting ? styles["animate-scroll"] : ""}
       />
       <Advantages
         ref={advantagesRef}
-        className={isAdvantagesIntercepting ? styles.anim : ""}
+        className={isAdvantagesIntercepting ? styles["animate-scroll"] : ""}
       />
       <Testimonials
         ref={testimonialsRef}
-        className={isTestimonialsIntercepting ? styles.anim : ""}
+        className={isTestimonialsIntercepting ? styles["animate-scroll"] : ""}
       />
       <Booking
         ref={bookingRef}
-        className={isBookingIntercepting ? styles.anim : ""}
+        className={isBookingIntercepting ? styles["animate-scroll"] : ""}
       />
       <Footer />
     </ModalContextProvider>

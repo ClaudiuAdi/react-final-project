@@ -1,4 +1,4 @@
-// Cool little custom-hook to stop scrolling https://gist.github.com/reecelucas/2f510e6b8504008deaaa52732202d2da
+// Cool little custom-hook to stop scrolling from https://gist.github.com/reecelucas/2f510e6b8504008deaaa52732202d2da
 
 import { useRef } from "react";
 

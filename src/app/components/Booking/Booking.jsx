@@ -8,20 +8,20 @@ const Booking = forwardRef(function (props, ref) {
   return (
     <>
       <section className={styles["booking-form-section"]} id="booking">
-        <span className={styles["section-title-tag"] + " " + poppins.className}>
+        <span className={`${styles["section-title-tag"]} ${poppins.className}`}>
           BOOK NOW
         </span>
         <h2
-          className={
-            styles["section-engaging-subtitle"] + " " + prata.className
-          }
+          className={`
+            ${styles["section-engaging-subtitle"]} ${prata.className}
+          `}
         >
           Take Action and Make
           <br />
           Your Aspirations Come True
         </h2>
 
-        <div className={styles["form-card"] + " " + props.className} ref={ref}>
+        <div className={`${styles["form-card"]} ${props.className}`} ref={ref}>
           <img
             src={reception_image.src}
             alt="reception image"

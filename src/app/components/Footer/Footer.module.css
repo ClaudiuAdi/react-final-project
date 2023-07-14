@@ -5,20 +5,13 @@
 }
 
 .footer-image-overlay {
-  background-color: rgba(26, 0, 0, 0.85);
   height: 100%;
-  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-
-  /* var 2 */
-  /* background-color: rgba(235, 235, 237, 1); */
-  background-color: rgba(255, 255, 255, 1);
   background-color: #1a1e23;
-  color: #1a1e23;
   color: #fff;
 }
 
@@ -41,9 +34,6 @@
 .footer-contact-details > a,
 .footer-socials > a {
   text-decoration: none;
-  color: #fff;
-
-  /* var 2 */
   color: #ebebed;
 }
 

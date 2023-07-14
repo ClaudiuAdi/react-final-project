@@ -86,10 +86,6 @@
   width: 9.063rem;
 }
 
-.form-inputs > span input {
-  background-color: red;
-}
-
 .breakfast-input,
 .form-grouped-inputs {
   display: flex;

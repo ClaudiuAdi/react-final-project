@@ -17,8 +17,6 @@
   align-items: center;
   justify-content: center;
   gap: 6.25rem;
-
-  /* var 2 */
   background-color: rgba(235, 235, 237, 1);
   color: #1a1e23;
 }

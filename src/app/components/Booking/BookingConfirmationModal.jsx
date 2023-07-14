@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./BookingConfirmationModal.module.css";
 import hotelsJson from "../../data/hotels.json";
-import Image from "next/image";
 import calculateCheckoutDate from "../../functions/calculateCheckoutDate";
 import totalPrice from "../../functions/calculateTotalPrice";
 import { poppins, prata } from "../../utils/fonts";
@@ -30,15 +29,6 @@ function BookingConfirmationModal(props) {
     <div
       className={`${styles["booking-confirmation-section"]} ${poppins.className}`}
     >
-      {/* <div className={styles["hotel-image-container"]}>
-        <Image
-          src={hotel.featured_image.src}
-          alt="Aici trebuia sa fie imaginea hotelului selectat, dar dintr-un nu stiu ce motiv nu merge"
-          width={200}
-          height={200}
-          className={styles.image}
-        />
-      </div> */}
       <h2 className={`${styles["fullname"]} ${prata.className}`}>
         {props.info.fullName}&apos;s booking
       </h2>
