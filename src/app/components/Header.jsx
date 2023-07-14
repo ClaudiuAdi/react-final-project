@@ -1,8 +1,16 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import styles from "./Header.module.css";
 import { poppins } from "../utils/fonts";
+import Logo from "./Logo";
 
 const Header = forwardRef(function (props, ref) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
+  // state for the navbar to stay fixed after the hero section
   const [fix, setFix] = useState(false);
 
   const setFixed = () => {
@@ -15,17 +23,33 @@ const Header = forwardRef(function (props, ref) {
 
   window.addEventListener("scroll", setFixed);
 
+  // refs for navigation in the page
   const hotelLinkRef = useRef();
   const advantagesRef = useRef();
   const testimonialsRef = useRef();
   const bookingRef = useRef();
   const topRef = useRef();
 
-  const hotelLinkClickHandler = (e) => handleClick(e, hotelLinkRef);
-  const advantagesLinkClickHandler = (e) => handleClick(e, advantagesRef);
-  const testimonialsLinkClickHandler = (e) => handleClick(e, testimonialsRef);
-  const bookingLinkClickHandler = (e) => handleClick(e, bookingRef);
-  const topLinkClickHandler = (e) => handleClick(e, topRef);
+  const hotelLinkClickHandler = (e) => {
+    handleClick(e, hotelLinkRef);
+    setIsOpen(false);
+  };
+  const advantagesLinkClickHandler = (e) => {
+    handleClick(e, advantagesRef);
+    setIsOpen(false);
+  };
+  const testimonialsLinkClickHandler = (e) => {
+    handleClick(e, testimonialsRef);
+    setIsOpen(false);
+  };
+  const bookingLinkClickHandler = (e) => {
+    handleClick(e, bookingRef);
+    setIsOpen(false);
+  };
+  const topLinkClickHandler = (e) => {
+    handleClick(e, topRef);
+    setIsOpen(false);
+  };
 
   const handleClick = (e, ref) => {
     e.preventDefault();
@@ -59,9 +83,13 @@ const Header = forwardRef(function (props, ref) {
           ref={topRef}
           onClick={topLinkClickHandler}
         >
-          logo
+          <Logo />
         </span>
-        <div className={styles.menu}>
+        <div
+          className={`${styles.menu} ${isOpen ? styles["is-open"] : ""} ${
+            isOpen && fix ? styles["is-not-open-on-hero"] : ""
+          }`}
+        >
           <a
             className={styles["link"]}
             href="#hotels"
@@ -92,8 +120,18 @@ const Header = forwardRef(function (props, ref) {
             onClick={bookingLinkClickHandler}
             className={`${styles["link"]} ${styles["book-link"]}`}
           >
-            Book now
+            BOOK NOW
           </a>
+        </div>
+        <div
+          className={`${styles["burger-menu"]} ${
+            isOpen ? styles["active"] : ""
+          }`}
+          onClick={toggleMenu}
+        >
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
         </div>
       </div>
     </header>

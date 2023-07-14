@@ -1,26 +1,25 @@
 .hotel {
-  width: 500px;
-  height: 600px;
+  width: 100%;
+  height: 31.25rem;
   background-color: #f6f3e9;
   color: #52514e;
   animation: all 0.5s;
   overflow: hidden;
 
-  /* var 2 */
-  /* background-color: #2f3740; */
   background-color: #1a1e23;
+  align-self: center;
 }
 
 .hotel-image-container {
   width: 100%;
-  height: 70%;
+  height: 68%;
   overflow: hidden;
 }
 
 .hotel-image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   transition: all 0.4s;
 }
 
@@ -29,24 +28,22 @@
 }
 
 .hotel-information {
-  /* border: 2px solid #ebebed; */
+  /* border: 0.125rem solid #ebebed; */
   border-top: none;
   /* padding: 2.2rem 2.8rem 1rem 3.8rem; */
-  padding: 2.2rem 2.8rem 1.4rem 3.8rem;
+  padding: 1.8rem 2.8rem 2rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
+  gap: 0.625rem;
   position: relative;
-
-  /* border: 2px solid #1a1e23;
-  border-top: none; */
+  /* background-color: red; */
 }
 
 .hotel-title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  padding-bottom: 26px;
+  padding-bottom: 1.625rem;
 
   /* var 2 */
   color: #fff;
@@ -54,7 +51,7 @@
 
 .hotel-price {
   color: #487254;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
 
   /* var 2 */
@@ -64,7 +61,7 @@
 .hotel-price span {
   color: #a0a0a0;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 
   /* var 2 */
   color: #ebebeb;
@@ -73,6 +70,7 @@
 .hotel-extra-info {
   display: flex;
   justify-content: space-between;
+  font-size: 1.25rem;
 }
 
 .hotel-breakfast-price {
@@ -85,7 +83,7 @@
 .hotel-extra-info-rating {
   background-color: #2f3740;
   color: #f6f3e9;
-  padding: 10px 15px;
+  padding: 0.625rem 0.938rem;
   width: fit-content;
   position: absolute;
   /* right: 2.8rem; */
@@ -98,4 +96,10 @@
   color: #f8d8af;
   right: 3rem;
   top: -4rem;
+}
+
+@media (max-width: 93.125rem) {
+  .hotel {
+    width: 31.25rem;
+  }
 }

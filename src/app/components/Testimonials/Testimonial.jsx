@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Testimonial.module.css";
 import { poppins, prata } from "../../utils/fonts";
-import quotations_image from "../../resources/download.svg";
 import Image from "next/image";
 
 function Testimonial(props) {
@@ -38,11 +37,6 @@ function Testimonial(props) {
       <div
         className={`${styles["testimonial-info"]} ${prata.className} ${testimonialClass}`}
       >
-        {/* <img
-        className={styles["testimonial-quotations"]}
-        src={quotations_image.src}
-        alt=""
-      /> */}
         <h2 className={styles["testimonial-text"]}>
           {props.testimonial.quote}
         </h2>

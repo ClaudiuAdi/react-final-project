@@ -1,22 +1,40 @@
 .advantage {
-  max-width: 350px;
+  max-width: 21.875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   text-align: center;
+  /* background-color: red; */
 }
 
 .advantage-title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .advantage-description {
-  line-height: 20px;
+  line-height: 1.2;
+  font-size: 1rem;
 }
 
 .advantage-icon {
-  font-size: 60px;
-  padding-bottom: 10px;
+  font-size: 3.875rem;
+  padding-bottom: 0.625rem;
+}
+
+@media (max-width: 81.25rem) {
+  .advantage-title {
+    margin-bottom: -1.25rem;
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .advantage {
+    gap: 1.875rem;
+  }
+
+  .advantage-icon {
+    padding-bottom: 0rem;
+  }
 }

@@ -8,7 +8,7 @@ import Advantages from "./components/Advantages/Advantages";
 import Booking from "./components/Booking/Booking";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
-import { BookingContextProvider } from "./store/form-context";
+import { ModalContextProvider } from "./store/modal-context";
 import styles from "./page.module.css";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
@@ -23,7 +23,7 @@ export default function Home() {
   const [bookingRef, isBookingIntercepting] = useIntersectionObserver();
 
   return (
-    <BookingContextProvider>
+    <ModalContextProvider>
       <Header
         ref={headerRef}
         className={isHeaderIntercepting ? styles.anim : ""}
@@ -50,6 +50,6 @@ export default function Home() {
         className={isBookingIntercepting ? styles.anim : ""}
       />
       <Footer />
-    </BookingContextProvider>
+    </ModalContextProvider>
   );
 }

@@ -6,23 +6,23 @@ import Icon from "../Icon";
 const footerMenuLinks = [
   {
     title: "About us",
-    link: "https://www.youtube.com/watch?v=QNJL6nfu__Q&ab_channel=michaeljacksonVEVO",
+    link: "https://chesscoders.com/",
   },
   {
     title: "Gallery",
-    link: "https://www.youtube.com/watch?v=4uvI2DSCgU0&ab_channel=Gallery-Topic",
+    link: "https://chesscoders.com/",
   },
   {
     title: "Support",
-    link: "https://www.youtube.com/watch?v=T9baU4o-qVw&ab_channel=CevaM%C4%83runt",
+    link: "https://chesscoders.com/",
   },
   {
     title: "Terms & Conditions",
-    link: "https://www.youtube.com/watch?v=PzLJ3a3-kBs&ab_channel=Mahalia",
+    link: "https://chesscoders.com/",
   },
   {
     title: "Privacy Policy",
-    link: "https://www.youtube.com/watch?v=aqd0_nnLRWo&ab_channel=DJMag",
+    link: "https://chesscoders.com/",
   },
 ];
 

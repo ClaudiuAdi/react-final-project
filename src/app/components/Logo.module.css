@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  font-size: 1.25rem;
+  height: 2.5rem;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.logo div {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}

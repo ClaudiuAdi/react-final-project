@@ -2,15 +2,15 @@ import { createContext, useState } from "react";
 import { useScrollBlock } from "../hooks/useScrollBlock";
 
 //Defining context
-export const BookingContext = createContext(undefined);
+export const ModalContext = createContext(undefined);
 
 //Context Wrapper
-export function BookingContextProvider({ children }) {
+export function ModalContextProvider({ children }) {
   const [openModal, setOpenModal] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
 
   return (
-    <BookingContext.Provider
+    <ModalContext.Provider
       value={{
         openModal,
         setOpenModal,
@@ -19,6 +19,6 @@ export function BookingContextProvider({ children }) {
       }}
     >
       {children}
-    </BookingContext.Provider>
+    </ModalContext.Provider>
   );
 }

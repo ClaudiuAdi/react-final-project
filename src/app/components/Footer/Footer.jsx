@@ -4,6 +4,7 @@ import { poppins } from "../../utils/fonts";
 import FooterSocials from "./FooterSocials";
 import FooterMenu from "./FooterMenu";
 import FooterContactDetails from "./FooterContactDetails";
+import Logo from "../Logo";
 
 const year = new Date().getFullYear();
 function Footer() {
@@ -11,7 +12,7 @@ function Footer() {
     <footer className={styles["footer-section"]}>
       <div className={styles["footer-image-overlay"] + " " + poppins.className}>
         <div className={styles["footer-contact"]}>
-          <div className={styles["footer-logo"]}>Chess travels</div>
+          <Logo className={styles["footer-logo"]} />
           <FooterContactDetails className={styles["footer-contact-details"]} />
           <FooterSocials className={styles["footer-socials"]} />
         </div>

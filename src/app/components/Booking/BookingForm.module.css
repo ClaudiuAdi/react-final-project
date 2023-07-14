@@ -1,65 +1,59 @@
 .titles {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.313rem;
 }
 
 .form-title {
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 .required {
   color: #6c97a4;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .form-subtitle {
   font-style: italic;
   color: #aaa;
-  margin-top: 5px;
+  margin-top: 0.313rem;
+  font-size: 1rem;
 }
 
 .form {
   border-left: none;
   width: 100%;
-  padding: 40px 60px;
-  background-color: #dad5c2;
-  background-color: #f6f3e9;
+  padding: 2.5rem 3.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: 2px solid #dad5c2; */
   border-left: none;
-
-  /* var 2 */
-  background-color: #ebebed;
   background-color: #2f3740;
 }
 
 .form-inputs {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 3.125rem;
 }
 
-/* varianta misto */
-.form-inputs .field {
-  height: 40px;
+.form-inputs .form-input-field {
+  height: 2.5rem;
   width: 100%;
   position: relative;
 }
 
 .form-grouped-inputs {
   justify-content: space-between;
-  margin: 5px 0;
+  margin: 0.313rem 0;
 }
 
-.form-inputs .field select {
-  height: 44px;
+.form-inputs .form-input-field select {
+  height: 2.75rem;
 }
 
 .form-inputs div input[type="date"] {
-  height: 42px;
+  height: 2.625rem;
 }
 
 .form-input-booking-date input:focus ~ label,
@@ -72,29 +66,29 @@
 }
 
 .form-grouped-inputs > .form-input-booking-date label {
-  bottom: 30px;
-  font-size: 15px;
+  bottom: 1.875rem;
+  font-size: 0.875rem;
   font-weight: 500;
-
-  /* var 2 */
-  /* color: #f8d8af; */
 }
 
 .form-inputs > .breakfast-input label {
   position: static;
-  padding-right: 10px;
+  padding-right: 0.625rem;
+  font-size: 1rem;
 }
 
 .form-inputs .form-grouped-inputs > * {
   width: auto;
-  min-width: 40%;
+  min-width: 36%;
 }
 
 .form-inputs .form-grouped-inputs .form-input-booking-date {
-  width: 160px;
+  width: 9.063rem;
 }
 
-/*  */
+.form-inputs > span input {
+  background-color: red;
+}
 
 .breakfast-input,
 .form-grouped-inputs {
@@ -105,7 +99,7 @@
 .breakfast-input {
   display: flex;
   align-items: center;
-  margin-top: -10px;
+  margin-top: -0.625rem;
 }
 
 .breakfast-input label {
@@ -113,14 +107,9 @@
 }
 
 .button-submit {
-  background-color: #487254;
-  color: #fff;
-  padding: 20px 40px;
-  font-size: 16px;
-  letter-spacing: 2px;
-
-  /* var 2 */
-  background-color: #1a1e23;
+  padding: 1.125rem 2.375rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.094rem;
   background-color: #f8d8af;
   color: #1a1e23;
   transition: 0.3s all;
@@ -134,7 +123,7 @@
 /* error handling */
 .invalid input,
 .invalid select {
-  border-bottom: 2px solid #b00020;
+  border-bottom: 0.125rem solid #b00020;
 }
 
 .invalid label {
@@ -157,10 +146,19 @@
 }
 
 .error-container {
-  height: 8px;
-  margin-top: -10px;
+  height: 0.5rem;
+  margin-top: -0.625rem;
 }
 
 .error-text {
   color: #b00020;
+}
+
+@media (max-width: 43.75rem) {
+  .form-grouped-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+    margin-bottom: -1.25rem;
+  }
 }

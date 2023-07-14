@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "./globals.css";
 import "./reset.css";
 
@@ -9,6 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Chess TRVL</title>
+      </head>
       <body id="#">{children}</body>
     </html>
   );

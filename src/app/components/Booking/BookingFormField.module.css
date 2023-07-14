@@ -1,9 +1,9 @@
 .field .underline {
   position: absolute;
-  height: 0px;
+  height: 0rem;
   width: 101%;
-  bottom: -10px;
-  padding-top: 2px;
+  bottom: -0.625rem;
+  padding-top: 0.125rem;
 }
 
 .field .underline:before {
@@ -11,7 +11,6 @@
   content: "";
   height: 100%;
   width: 100%;
-  background: #487254;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -31,32 +30,24 @@
 .field select {
   width: 100%;
   border: none;
-  border-bottom: 2px solid #aaa;
-  background-color: #dad5c2;
-  background-color: #fff;
+  border-bottom: 0.125rem solid #aaa;
   outline: none;
   font-weight: 400;
-  color: #52514e;
-  height: 40px;
-  margin: 8px 0;
-  font-size: 20px;
-  background-color: #f6f3e9;
-
-  /* var 2 */
-  /* background-color: #ebebed; */
+  height: 2.5rem;
+  margin: 0.5rem 0;
+  font-size: 1.125rem;
   background-color: #2f3740;
-  color: #1a1e23;
   color: #fff;
 }
 
 .input-label {
   position: absolute;
-  bottom: 10px;
+  bottom: 0.625rem;
   left: 0;
   color: #52514e;
   pointer-events: none;
   transition: all 0.3s ease;
-  font-size: 20px;
+  font-size: 1.125rem;
 
   /* var 2 */
   color: #1a1e23;
@@ -67,8 +58,8 @@
 .field input:valid ~ label,
 .field select:focus ~ label,
 .field select:valid ~ label {
-  transform: translateY(-20px);
-  font-size: 15px;
+  transform: translateY(-1.25rem);
+  font-size: 0.875rem;
   color: #487254;
   font-weight: 500;
 
@@ -78,7 +69,7 @@
 
 .required {
   color: #6c97a4;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .form-grouped-inputs > .invalid label {

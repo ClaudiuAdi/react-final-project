@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import styles from "./BookingErrorModal.module.css";
-import { BookingContext } from "../../store/form-context";
+import { ModalContext } from "../../store/modal-context";
 import { poppins } from "../../utils/fonts";
 
 function BookingErrorModal() {
-  const { setOpenModal, allowScroll } = useContext(BookingContext);
+  const { setOpenModal, allowScroll } = useContext(ModalContext);
 
   const onClickHandler = () => {
     setOpenModal(false);
